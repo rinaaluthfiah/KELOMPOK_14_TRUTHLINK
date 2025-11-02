@@ -28,7 +28,7 @@ okei
 
 
 ## Struktur Folder/Package
-<img width="567" height="1519" alt="image" src="https://github.com/user-attachments/assets/0b462dd5-6acf-447b-9bb1-d6608d590738" />
+
 
 
 ## Library / Framework
