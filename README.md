@@ -9,3 +9,27 @@ Anggota Kelompok:
 
 4. Nadila Putri | 2409116052
 
+
+## Deskripsi singkat program
+
+
+
+## Fitur Program
+
+
+
+## Penerapan OOP
+
+
+
+## Struktur Folder/Package
+
+
+## Library / Framework
+
+
+
+## Cara menggunakan program
+
+
+
