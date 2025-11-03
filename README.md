@@ -45,7 +45,11 @@ Program ini dilengkapi dengan berbagai fitur utama untuk mendukung pengelolaan d
 
 ## 2. Read
 
-## 3.  Update 📝
+## 3.  Update 📝 contohnya
+<p align="center">
+<img width="911" height="626" alt="Screenshot 2025-11-02 182210" src="https://github.com/user-attachments/assets/04730e0c-6c6e-4d23-bb00-d0a8bfebece5"  width="400">
+</p>
+
 
 ## 4. Delete  🗑
 
