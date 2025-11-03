@@ -145,28 +145,114 @@ Dengan adanya fitur ini, proses pengelolaan dan penelusuran laporan menjadi lebi
 
 # Penerapan OOP
 1. Encapsulation
-   Encapsulation merupakan salah satu pilar utama dalam Pemrograman Berorientasi Objek (PBO) yang bertujuan untuk melindungi data dari akses langsung dari luar kelas. Dengan menerapkan konsep ini, setiap atribut dalam kelas disembunyikan (data hiding) menggunakan access modifier seperti private, dan hanya dapat diakses melalui metode khusus (getter dan setter). Pendekatan ini membantu menjaga keamanan data, konsistensi nilai, serta memudahkan pemeliharaan kode karena perubahan atribut internal tidak memengaruhi bagian lain dari program yang menggunakan kelas tersebut.
-   Kelas User merupakan salah satu entitas utama dalam sistem yang menyimpan informasi pengguna seperti id_user, nama, username, password, dan email. Seluruh atribut bersifat private dan diakses melalui metode getter dan setter, sebagaimana ditunjukkan pada potongan kode berikut:
+   Encapsulation merupakan salah satu pilar utama dalam Pemrograman Berorientasi Objek (PBO) yang bertujuan untuk melindungi data dari akses langsung dari luar kelas.
+Penerapan konsep ini dilakukan dengan menggunakan access modifier private pada atribut kelas dan menyediakan metode getter serta setter untuk mengakses atau memodifikasi nilai atribut tersebut. Pada sistem ini, encapsulation diterapkan pada kelas User yang memiliki atribut seperti id_user, nama, username, password, dan email. Semua atribut tersebut bersifat private dan hanya dapat diakses melalui metode `getId_user()`, `setNama()`, `getUsername()`, `setPassword()`, dan sebagainya.
+   Selain pada kelas User, prinsip encapsulation juga diterapkan pada kelas lain seperti Admin, Pelapor, Laporan, dan Tanggapan, di mana setiap atribut private dikelola melalui metode getter dan setter. Hal ini menjaga integritas data serta keamanan informasi pengguna dalam sistem, karena setiap perubahan nilai atribut dilakukan secara terkontrol.
    
-   Selain pada kelas User, prinsip encapsulation juga diterapkan pada kelas lain seperti Admin, Pelapor, dan Laporan. Masing-masing kelas memiliki atribut private serta metode getter dan setter untuk mengelola datanya. Hal ini menjaga integritas data serta keamanan informasi pengguna dalam sistem sehingga sistem dapat mengontrol alur data antarobjek tanpa harus mengekspos detail internal setiap entitas.
-   
-2. Inheritance
-   Inheritance merupakan salah satu pilar utama dalam Pemrograman Berorientasi Objek (PBO) yang memungkinkan suatu kelas (child) mewarisi properti dan metode dari kelas lain (parent). Dengan menerapkan konsep ini, kode yang bersifat umum dapat digunakan kembali oleh kelas turunan, sehingga mengurangi redundansi dan meningkatkan efisiensi dalam pengembangan sistem.
+3. Inheritance
+   Inheritance merupakan pilar OOP yang memungkinkan suatu kelas (child/subclass) mewarisi properti dan metode dari kelas lain (parent/superclass), sehingga mengurangi redundansi dan meningkatkan efisiensi kode.
    - Parent/Super Class
-     Sebuah kelas induk (superclass) dapat mewariskan properti dan metode kepada kelas-kelas turunannya (subclass). Artinya, subclass dapat memanfaatkan atribut dan perilaku yang telah didefinisikan di superclass, serta dapat menambahkan atribut atau perilaku baru sesuai kebutuhan.
+     Pada sistem ini, kelas User berperan sebagai superclass yang berisi atribut umum seperti `id_user`, `nama`, `username`, `password`, dan `email`. Kelas ini juga merupakan entitas JPA yang dipetakan ke tabel user di database dan menggunakan strategi pewarisan `@Inheritance(strategy = InheritanceType.JOINED)`. Melalui strategi ini, setiap subclass memiliki tabel tersendiri yang bergabung dengan tabel user berdasarkan kolom `id_user`.
      
-     Class User merupakan kelas entitas JPA (Java Persistence API) yang dipetakan ke tabel user di database. Kelas ini berfungsi sebagai superclass bagi entitas lain melalui strategi pewarisan @Inheritance(strategy = InheritanceType.JOINED). Kelas ini menyimpan atribut umum untuk semua jenis pengguna, yaitu id_user, nama, username, password, dan email. Setiap subclass (misalnya Admin dan Pelapor) memiliki tabel tersendiri yang bergabung (JOINED) dengan tabel user berdasarkan kolom id_user.
+```
+    @Entity
+    @Table(name = "user")
+    @Inheritance(strategy = InheritanceType.JOINED)
+    public abstract class User {
+      @Id
+      @GeneratedValue(generator = "user_id_gen")
+      @GenericGenerator(name = "user_id_gen", strategy = "com.mycompany.linkkk.PelaporIdGenerator")
+      @Column(name = "id_user", length = 10)
+      private String id_user;
+
+      private String nama;
+      private String username;
+      private String password;
+      private String email;
+
+      // Relasi ke tabel laporan (satu user bisa punya banyak laporan)
+      @OneToMany(mappedBy = "userPelapor", cascade = CascadeType.ALL)
+      private List<Laporan> laporanList;
+
+      // ==================== Constructor ====================
+      public User() {}
+
+      public User(String id_user, String nama, String username, String password, String email) {
+        this.id_user = id_user;
+        this.nama = nama;
+        this.username = username;
+        this.password = password;
+        this.email = email;
+      }
+
+      // ==================== Getter & Setter ====================
+    }
+```
+    
    - Child/Sub Class
-     Kelas turunan (subclass) merupakan kelas yang mewarisi seluruh atribut dan perilaku dari superclass, kemudian dapat menambahkan atribut baru atau mengimplementasikan perilaku yang lebih spesifik sesuai kebutuhan masing-masing. Dalam sistem ini, terdapat dua subclass utama, yaitu Pelapor dan Admin.
+     Kelas turunan (subclass) mewarisi seluruh atribut dan perilaku dari User, serta menambahkan atribut baru yang lebih spesifik sesuai kebutuhan.
      
      a. Pelapor
-        Class Pelapor mewarisi class User. Selain itu, class ini memiliki atribut tambahan yaitu tanggal_lahir, jenis_kelamin dan tanggal_daftar. Class ini mewakili entitas pengguna yang melaporkan kasus, dengan data pribadi tambahan seperti tanggal lahir, jenis kelamin, dan tanggal pendaftaran.
-        <img width="1986" height="831" alt="image" src="https://github.com/user-attachments/assets/9042038a-8649-4e6b-bf2b-009679bef3df" />
-        
-     b. Admin
-        Sama seperti Pelapor, class Admin juga mewarisi atribut umum dari User, dan menambahkan atribut kontak_admin. Class Admin mewakili entitas pengguna dengan peran pengelola sistem. Selain atribut umum dari User, kelas ini memiliki atribut tambahan kontak_admin untuk menyimpan informasi kontak admin.
-        <img width="2035" height="511" alt="image" src="https://github.com/user-attachments/assets/87326791-7288-48cf-8bbf-53a2651a9360" />
+        Kelas Pelapor mewarisi User dan menambahkan atribut tambahan seperti `tanggal_lahir`, `jenis_kelamin`, dan `tanggal_daftar`. Kelas ini merepresentasikan pengguna yang berperan sebagai pelapor kasus dalam sistem.
+     
+```  
+    @Entity
+    @Table(name = "pelapor")
+    @PrimaryKeyJoinColumn(name = "id_user")
+    public class Pelapor extends User {
 
+        @Temporal(TemporalType.DATE)
+        private Date tanggal_lahir;
+
+        @Enumerated(EnumType.STRING)
+        @Column(name = "jenis_kelamin", nullable = false)
+        private JenisKelamin jenis_kelamin;
+
+        @Temporal(TemporalType.TIMESTAMP)
+        private Date tanggal_daftar;
+
+        public Pelapor() {}
+
+        public Pelapor(String id_user, String nama, String username, String password, String email,
+                       Date tanggal_lahir, JenisKelamin jenis_kelamin, Date tanggal_daftar) {
+            super(id_user, nama, username, password, email);
+            this.tanggal_lahir = tanggal_lahir;
+            this.jenis_kelamin = jenis_kelamin;
+            this.tanggal_daftar = tanggal_daftar;
+        }
+
+        // ==================== Getter & Setter ====================
+    }
+```
+
+     b. Admin
+        Kelas Admin juga mewarisi User dan menambahkan atribut `kontak_admin` untuk menyimpan informasi kontak administrator. Kelas ini digunakan untuk mengelola data pelapor dan memverifikasi laporan yang masuk ke sistem.
+        
+```
+    @Entity
+    @Table(name = "admin")
+    @PrimaryKeyJoinColumn(name = "id_user")
+    public class Admin extends User {
+
+        @Column(name = "kontak_admin")
+        private String kontak_admin;
+
+        public Admin() {}
+
+        public Admin(String id_user, String nama, String username, String password, String email, String kontak_admin) {
+            super(id_user, nama, username, password, email);
+            this.kontak_admin = kontak_admin;
+        }
+
+        public String getKontak_admin() {
+            return kontak_admin;
+        }
+
+        public void setKontak_admin(String kontak_admin) {
+            this.kontak_admin = kontak_admin;
+        }    
+    }
+``` 
      
 4. Abstraction
    
