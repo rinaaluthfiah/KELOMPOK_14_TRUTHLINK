@@ -66,7 +66,7 @@ Program ini dilengkapi dengan berbagai fitur utama untuk mendukung pengelolaan d
 ## 3.  Update 📝 contohnya
 Fitur Update memungkinkan user untuk melakukan perubahan data laporan yang sudah ada.
 Contohnya:
-- Pelapor dapat memperbarui isi laporan jika terdapat kesalahan atau ingin menambahkan bukti baru.
+- Pelapor dapat memperbarui isi laporan jika terdapat kesalahan atau ingin menambahkan bukti baru. Tapi jika laporan sudah dikirimkan ke lembaga maka laporan tidak bisa di edit lagi.
 - Admin dapat mengubah tingkat keparahan dari laporan yang dikirimkan pelapor dan juga status laporan, seperti Diterima / Dalam Proses /Ditolak / Selesai
  
 <p align="center">
