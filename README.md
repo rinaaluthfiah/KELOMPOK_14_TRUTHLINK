@@ -57,23 +57,43 @@ Program ini bertujuan untuk membangun manajemen laporan yang efisien dan terstru
 1.  Use Case Diagram TruthLink
 
 # Fitur Program
-Program ini dilengkapi dengan berbagai fitur utama untuk mendukung pengelolaan data laporan secara efektif dan efisien, yaitu:
+Program ini dilengkapi dengan berbagai fitur utama untuk mendukung pengelolaan data laporan secara efektif, efisien, dan transparan, baik bagi pelapor maupun admin, yaitu:
 
 ## 1. Create 
 
 ## 2. Read
 
 ## 3.  Update 📝 contohnya
+Fitur Update memungkinkan user untuk melakukan perubahan data laporan yang sudah ada.
+Contohnya:
+- Pelapor dapat memperbarui isi laporan jika terdapat kesalahan atau ingin menambahkan bukti baru.
+- Admin dapat mengubah tingkat keparahan dari laporan yang dikirimkan pelapor dan juga status laporan, seperti Diterima / Dalam Proses /Ditolak / Selesai
+ 
 <p align="center">
 <img width="911" height="626" alt="Screenshot 2025-11-02 182210" src="https://github.com/user-attachments/assets/04730e0c-6c6e-4d23-bb00-d0a8bfebece5"  width="400">
 </p>
 
+Dengan fitur ini, seluruh pihak dapat memperbarui informasi laporan secara dinamis sesuai perkembangan proses verifikasi.
 
 ## 4. Delete  🗑
 
-## 5. Searching 🔎
 
-## 6. Filter
+## 5. Searching 🔎 & Filter
+Fitur ini berfungsi untuk memudahkan admin dalam menemukan laporan/tanggapan tertentu secara cepat dan akurat.
+Sistem menyediakan dua mekanisme pencarian data yang dapat digunakan secara terpisah maupun bersamaan:
+1. Searching (Pencarian):
+Admin dapat mengetik kata kunci tertentu (misalnya id_laporan, id_userPelapor, atau judul laporan) untuk menampilkan data yang relevan tanpa perlu menelusuri seluruh daftar laporan.
+
+2. Filter (Penyaringan):
+Admin juga dapat menyaring laporan berdasarkan kriteria tertentu, seperti:
+- Kategori laporan: Kekerasan, Korupsi, Diskriminasi, dan Pelanggaran HAM
+- Status laporan: Menunggu, Dalam Proses, Diterima, Ditolak, Selesai
+
+3. Kombinasi Searching dan Filter:
+Sistem juga mendukung penggunaan kedua fitur ini secara bersamaan.
+Contohnya, admin mencari kata kunci “kampus” dan menyaring laporan dengan kategori laporan “kekerasan”, sehingga hasil yang ditampilkan benar-benar sesuai dengan kebutuhan pencarian.
+
+Dengan adanya fitur ini, proses pengelolaan dan penelusuran laporan menjadi lebih efisien, cepat, dan terarah, baik untuk admin dalam melakukan verifikasi atau tindak lanjut laporan.
 
 # Penerapan OOP
 1. Encapsulation
