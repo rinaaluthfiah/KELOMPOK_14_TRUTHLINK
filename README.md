@@ -11,7 +11,7 @@ Anggota Kelompok:
 
 # Program TruthLink
 <p align="center">
-  <img width="1000" height="1000" alt="Tak berjudul27_20251023092038" src="https://github.com/user-attachments/assets/3951c018-eaa5-4577-a087-b31533d5c1a8" />
+  <img width="400" height="1000" alt="Tak berjudul27_20251023092038" src="https://github.com/user-attachments/assets/3951c018-eaa5-4577-a087-b31533d5c1a8" />
       
 
 
