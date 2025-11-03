@@ -146,26 +146,28 @@ Dengan adanya fitur ini, proses pengelolaan dan penelusuran laporan menjadi lebi
 # Penerapan OOP
 1. Encapsulation
    
-3. Inheritance
-   - Parent Class
-     
+2. Inheritance
+   Inheritance merupakan salah satu pilar utama dalam Pemrograman Berorientasi Objek (PBO) yang memungkinkan suatu kelas (child) mewarisi properti dan metode dari kelas lain (parent). Dengan menerapkan konsep ini, kode yang bersifat umum dapat digunakan kembali oleh kelas turunan, sehingga mengurangi redundansi dan meningkatkan efisiensi dalam pengembangan sistem.
+   - Parent/Super Class
+     Sebuah kelas induk (superclass) dapat mewariskan properti dan metode kepada kelas-kelas turunannya (subclass). Artinya, subclass dapat memanfaatkan atribut dan perilaku yang telah didefinisikan di superclass, serta dapat menambahkan atribut atau perilaku baru sesuai kebutuhan.
      <img width="2879" height="1527" alt="image" src="https://github.com/user-attachments/assets/b2b8bb95-b68e-430f-bd99-fc3578fb901e" />
-     
-   - Child Class
+     Class User merupakan kelas entitas JPA (Java Persistence API) yang dipetakan ke tabel user di database. Kelas ini berfungsi sebagai superclass bagi entitas lain melalui strategi pewarisan @Inheritance(strategy = InheritanceType.JOINED). Kelas ini menyimpan atribut umum untuk semua jenis pengguna, yaitu id_user, nama, username, password, dan email. Setiap subclass (misalnya Admin dan Pelapor) memiliki tabel tersendiri yang bergabung (JOINED) dengan tabel user berdasarkan kolom id_user.
+   - Child/Sub Class
+     Kelas turunan (subclass) merupakan kelas yang mewarisi seluruh atribut dan perilaku dari superclass, kemudian dapat menambahkan atribut baru atau mengimplementasikan perilaku yang lebih spesifik sesuai kebutuhan masing-masing. Dalam sistem ini, terdapat dua subclass utama, yaitu Pelapor dan Admin.
      a. Pelapor
-  
+        Class Pelapor mewarisi class User. Selain itu, class ini memiliki atribut tambahan yaitu tanggal_lahir, jenis_kelamin dan tanggal_daftar. Class ini mewakili entitas pengguna yang melaporkan kasus, dengan data pribadi tambahan seperti tanggal lahir, jenis kelamin, dan tanggal pendaftaran.
         <img width="2878" height="1528" alt="image" src="https://github.com/user-attachments/assets/046997d5-7b84-44ff-8b98-414de8e42879" />
 
      b. Admin
-
+        Sama seperti Pelapor, class Admin juga mewarisi atribut umum dari User, dan menambahkan atribut kontak_admin. Class Admin mewakili entitas pengguna dengan peran pengelola sistem. Selain atribut umum dari User, kelas ini memiliki atribut tambahan kontak_admin untuk menyimpan informasi kontak admin.
         <img width="2879" height="1529" alt="image" src="https://github.com/user-attachments/assets/b5516db4-b753-4a35-8e65-dfaff78ccbc8" />
 
      
-5. Abstraction
+3. Abstraction
    
-7. Polymorphism
+4. Polymorphism
    
-9. Interface
+5. Interface
 
 # Struktur Folder/Package
 <p align="center">
