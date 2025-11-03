@@ -9,11 +9,11 @@ Anggota Kelompok:
 
 4. Nadila Putri | 2409116052
 
-# Program TruthLink
+# TruthLink
 <p align="center">
   <img width="400" height="500" alt="Tak berjudul27_20251023092038" src="https://github.com/user-attachments/assets/3951c018-eaa5-4577-a087-b31533d5c1a8" />
       
-
+Deskripsi Singkat Program:
 
 Program ini merupakan sistem pelaporan digital berbasis Website yang  dirancang sebagai upaya mendukung tercapainya Sustainable Development Goals (SDG) 16: Peace, Justice, and Strong Institutions, dengan menyediakan wadah pelaporan yang aman, cepat, dan transparan bagi masyarakat. Melalui sistem ini, pengguna dapat membuat laporan mengenai tindak kekerasan, korupsi, diskriminasi, pelanggaran HAM, hingga penyalahgunaan kekuasaan, yang kemudian diverifikasi dan ditindaklanjuti oleh pihak admin maupun lembaga terkait.
 
@@ -25,7 +25,7 @@ Program ini bertujuan untuk membangun manajemen laporan yang efisien dan terstru
 
 <details>
   <summary>1. Flowchart Menu Utama</summary>
-   
+   <img width="400" height="500" alt="Tak berjudul27_20251023092038" src="https://github.com/user-attachments/assets/3951c018-eaa5-4577-a087-b31533d5c1a8" />
 </details>
 
 <details>
@@ -145,29 +145,34 @@ Dengan adanya fitur ini, proses pengelolaan dan penelusuran laporan menjadi lebi
 
 # Penerapan OOP
 1. Encapsulation
+   Encapsulation merupakan salah satu pilar utama dalam Pemrograman Berorientasi Objek (PBO) yang bertujuan untuk melindungi data dari akses langsung dari luar kelas. Dengan menerapkan konsep ini, setiap atribut dalam kelas disembunyikan (data hiding) menggunakan access modifier seperti private, dan hanya dapat diakses melalui metode khusus (getter dan setter). Pendekatan ini membantu menjaga keamanan data, konsistensi nilai, serta memudahkan pemeliharaan kode karena perubahan atribut internal tidak memengaruhi bagian lain dari program yang menggunakan kelas tersebut.
+   Kelas User merupakan salah satu entitas utama dalam sistem yang menyimpan informasi pengguna seperti id_user, nama, username, password, dan email. Seluruh atribut bersifat private dan diakses melalui metode getter dan setter, sebagaimana ditunjukkan pada potongan kode berikut:
+   
+   Selain pada kelas User, prinsip encapsulation juga diterapkan pada kelas lain seperti Admin, Pelapor, dan Laporan. Masing-masing kelas memiliki atribut private serta metode getter dan setter untuk mengelola datanya. Hal ini menjaga integritas data serta keamanan informasi pengguna dalam sistem sehingga sistem dapat mengontrol alur data antarobjek tanpa harus mengekspos detail internal setiap entitas.
    
 2. Inheritance
    Inheritance merupakan salah satu pilar utama dalam Pemrograman Berorientasi Objek (PBO) yang memungkinkan suatu kelas (child) mewarisi properti dan metode dari kelas lain (parent). Dengan menerapkan konsep ini, kode yang bersifat umum dapat digunakan kembali oleh kelas turunan, sehingga mengurangi redundansi dan meningkatkan efisiensi dalam pengembangan sistem.
    - Parent/Super Class
      Sebuah kelas induk (superclass) dapat mewariskan properti dan metode kepada kelas-kelas turunannya (subclass). Artinya, subclass dapat memanfaatkan atribut dan perilaku yang telah didefinisikan di superclass, serta dapat menambahkan atribut atau perilaku baru sesuai kebutuhan.
-     <img width="2879" height="1527" alt="image" src="https://github.com/user-attachments/assets/b2b8bb95-b68e-430f-bd99-fc3578fb901e" />
+     
      Class User merupakan kelas entitas JPA (Java Persistence API) yang dipetakan ke tabel user di database. Kelas ini berfungsi sebagai superclass bagi entitas lain melalui strategi pewarisan @Inheritance(strategy = InheritanceType.JOINED). Kelas ini menyimpan atribut umum untuk semua jenis pengguna, yaitu id_user, nama, username, password, dan email. Setiap subclass (misalnya Admin dan Pelapor) memiliki tabel tersendiri yang bergabung (JOINED) dengan tabel user berdasarkan kolom id_user.
    - Child/Sub Class
      Kelas turunan (subclass) merupakan kelas yang mewarisi seluruh atribut dan perilaku dari superclass, kemudian dapat menambahkan atribut baru atau mengimplementasikan perilaku yang lebih spesifik sesuai kebutuhan masing-masing. Dalam sistem ini, terdapat dua subclass utama, yaitu Pelapor dan Admin.
+     
      a. Pelapor
         Class Pelapor mewarisi class User. Selain itu, class ini memiliki atribut tambahan yaitu tanggal_lahir, jenis_kelamin dan tanggal_daftar. Class ini mewakili entitas pengguna yang melaporkan kasus, dengan data pribadi tambahan seperti tanggal lahir, jenis kelamin, dan tanggal pendaftaran.
-        <img width="2878" height="1528" alt="image" src="https://github.com/user-attachments/assets/046997d5-7b84-44ff-8b98-414de8e42879" />
-
+        <img width="1986" height="831" alt="image" src="https://github.com/user-attachments/assets/9042038a-8649-4e6b-bf2b-009679bef3df" />
+        
      b. Admin
         Sama seperti Pelapor, class Admin juga mewarisi atribut umum dari User, dan menambahkan atribut kontak_admin. Class Admin mewakili entitas pengguna dengan peran pengelola sistem. Selain atribut umum dari User, kelas ini memiliki atribut tambahan kontak_admin untuk menyimpan informasi kontak admin.
-        <img width="2879" height="1529" alt="image" src="https://github.com/user-attachments/assets/b5516db4-b753-4a35-8e65-dfaff78ccbc8" />
+        <img width="2035" height="511" alt="image" src="https://github.com/user-attachments/assets/87326791-7288-48cf-8bbf-53a2651a9360" />
 
      
-3. Abstraction
+4. Abstraction
    
-4. Polymorphism
+5. Polymorphism
    
-5. Interface
+6. Interface
 
 # Struktur Folder/Package
 <p align="center">
