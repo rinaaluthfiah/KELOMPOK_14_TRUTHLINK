@@ -11,7 +11,7 @@ Anggota Kelompok:
 
 # Program TruthLink
 <p align="center">
-  <img width="400" height="1000" alt="Tak berjudul27_20251023092038" src="https://github.com/user-attachments/assets/3951c018-eaa5-4577-a087-b31533d5c1a8" />
+  <img width="400" height="500" alt="Tak berjudul27_20251023092038" src="https://github.com/user-attachments/assets/3951c018-eaa5-4577-a087-b31533d5c1a8" />
       
 
 
@@ -169,7 +169,7 @@ Dengan adanya fitur ini, proses pengelolaan dan penelusuran laporan menjadi lebi
 
 # Struktur Folder/Package
 <p align="center">
-<img width="875" height="713" alt="image" src="https://github.com/user-attachments/assets/46da45ed-7f99-4020-bff6-8f12c46a11f2" />
+<img width="650" height="500" alt="image" src="https://github.com/user-attachments/assets/46da45ed-7f99-4020-bff6-8f12c46a11f2" />
 <p>
 1. Source Packages
   
