@@ -147,7 +147,20 @@ Dengan adanya fitur ini, proses pengelolaan dan penelusuran laporan menjadi lebi
 1. Encapsulation
    
 3. Inheritance
-   
+   - Parent Class
+     
+     <img width="2879" height="1527" alt="image" src="https://github.com/user-attachments/assets/b2b8bb95-b68e-430f-bd99-fc3578fb901e" />
+     
+   - Child Class
+     a. Pelapor
+  
+        <img width="2878" height="1528" alt="image" src="https://github.com/user-attachments/assets/046997d5-7b84-44ff-8b98-414de8e42879" />
+
+     b. Admin
+
+        <img width="2879" height="1529" alt="image" src="https://github.com/user-attachments/assets/b5516db4-b753-4a35-8e65-dfaff78ccbc8" />
+
+     
 5. Abstraction
    
 7. Polymorphism
@@ -155,12 +168,16 @@ Dengan adanya fitur ini, proses pengelolaan dan penelusuran laporan menjadi lebi
 9. Interface
 
 # Struktur Folder/Package
+<p align="center">
 <img width="875" height="713" alt="image" src="https://github.com/user-attachments/assets/46da45ed-7f99-4020-bff6-8f12c46a11f2" />
-
+<p>
 1. Source Packages
+  
 2. Test Packages
+   
 3. Other Sources
-4. Dependencies
+   
+6. Dependencies
 
 
 
