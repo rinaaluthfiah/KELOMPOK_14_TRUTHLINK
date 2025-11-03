@@ -149,111 +149,111 @@ Dengan adanya fitur ini, proses pengelolaan dan penelusuran laporan menjadi lebi
 Penerapan konsep ini dilakukan dengan menggunakan access modifier private pada atribut kelas dan menyediakan metode getter serta setter untuk mengakses atau memodifikasi nilai atribut tersebut. Pada sistem ini, encapsulation diterapkan pada kelas User yang memiliki atribut seperti id_user, nama, username, password, dan email. Semua atribut tersebut bersifat private dan hanya dapat diakses melalui metode `getId_user()`, `setNama()`, `getUsername()`, `setPassword()`, dan sebagainya.
    Selain pada kelas User, prinsip encapsulation juga diterapkan pada kelas lain seperti Admin, Pelapor, Laporan, dan Tanggapan, di mana setiap atribut private dikelola melalui metode getter dan setter. Hal ini menjaga integritas data serta keamanan informasi pengguna dalam sistem, karena setiap perubahan nilai atribut dilakukan secara terkontrol.
    
-3. Inheritance
+2. Inheritance
    Inheritance merupakan pilar OOP yang memungkinkan suatu kelas (child/subclass) mewarisi properti dan metode dari kelas lain (parent/superclass), sehingga mengurangi redundansi dan meningkatkan efisiensi kode.
    - Parent/Super Class
      Pada sistem ini, kelas User berperan sebagai superclass yang berisi atribut umum seperti `id_user`, `nama`, `username`, `password`, dan `email`. Kelas ini juga merupakan entitas JPA yang dipetakan ke tabel user di database dan menggunakan strategi pewarisan `@Inheritance(strategy = InheritanceType.JOINED)`. Melalui strategi ini, setiap subclass memiliki tabel tersendiri yang bergabung dengan tabel user berdasarkan kolom `id_user`.
-     
-```
-    @Entity
-    @Table(name = "user")
-    @Inheritance(strategy = InheritanceType.JOINED)
-    public abstract class User {
-      @Id
-      @GeneratedValue(generator = "user_id_gen")
-      @GenericGenerator(name = "user_id_gen", strategy = "com.mycompany.linkkk.PelaporIdGenerator")
-      @Column(name = "id_user", length = 10)
-      private String id_user;
 
-      private String nama;
-      private String username;
-      private String password;
-      private String email;
+      ```
+      @Entity
+      @Table(name = "user")
+      @Inheritance(strategy = InheritanceType.JOINED)
+      public abstract class User {
+        @Id
+        @GeneratedValue(generator = "user_id_gen")
+        @GenericGenerator(name = "user_id_gen", strategy = "com.mycompany.linkkk.PelaporIdGenerator")
+        @Column(name = "id_user", length = 10)
+        private String id_user;
 
-      // Relasi ke tabel laporan (satu user bisa punya banyak laporan)
-      @OneToMany(mappedBy = "userPelapor", cascade = CascadeType.ALL)
-      private List<Laporan> laporanList;
+        private String nama;
+        private String username;
+        private String password;
+        private String email;
 
-      // ==================== Constructor ====================
-      public User() {}
+        // Relasi ke tabel laporan (satu user bisa punya banyak laporan)
+        @OneToMany(mappedBy = "userPelapor", cascade = CascadeType.ALL)
+        private List<Laporan> laporanList;
 
-      public User(String id_user, String nama, String username, String password, String email) {
-        this.id_user = id_user;
-        this.nama = nama;
-        this.username = username;
-        this.password = password;
-        this.email = email;
+        // ==================== Constructor ====================
+        public User() {}
+
+        public User(String id_user, String nama, String username, String password, String email) {
+          this.id_user = id_user;
+          this.nama = nama;
+          this.username = username;
+          this.password = password;
+          this.email = email;
+        }
+
+        // ==================== Getter & Setter ====================
       }
+      ```
 
-      // ==================== Getter & Setter ====================
-    }
-```
-    
    - Child/Sub Class
      Kelas turunan (subclass) mewarisi seluruh atribut dan perilaku dari User, serta menambahkan atribut baru yang lebih spesifik sesuai kebutuhan.
      
      a. Pelapor
         Kelas Pelapor mewarisi User dan menambahkan atribut tambahan seperti `tanggal_lahir`, `jenis_kelamin`, dan `tanggal_daftar`. Kelas ini merepresentasikan pengguna yang berperan sebagai pelapor kasus dalam sistem.
      
-```  
-    @Entity
-    @Table(name = "pelapor")
-    @PrimaryKeyJoinColumn(name = "id_user")
-    public class Pelapor extends User {
+        ```
+        @Entity
+        @Table(name = "pelapor")
+        @PrimaryKeyJoinColumn(name = "id_user")
+        public class Pelapor extends User {
 
-        @Temporal(TemporalType.DATE)
-        private Date tanggal_lahir;
+            @Temporal(TemporalType.DATE)
+            private Date tanggal_lahir;
 
-        @Enumerated(EnumType.STRING)
-        @Column(name = "jenis_kelamin", nullable = false)
-        private JenisKelamin jenis_kelamin;
+            @Enumerated(EnumType.STRING)
+            @Column(name = "jenis_kelamin", nullable = false)
+            private JenisKelamin jenis_kelamin;
 
-        @Temporal(TemporalType.TIMESTAMP)
-        private Date tanggal_daftar;
+            @Temporal(TemporalType.TIMESTAMP)
+            private Date tanggal_daftar;
 
-        public Pelapor() {}
+            public Pelapor() {}
 
-        public Pelapor(String id_user, String nama, String username, String password, String email,
-                       Date tanggal_lahir, JenisKelamin jenis_kelamin, Date tanggal_daftar) {
-            super(id_user, nama, username, password, email);
-            this.tanggal_lahir = tanggal_lahir;
-            this.jenis_kelamin = jenis_kelamin;
-            this.tanggal_daftar = tanggal_daftar;
+            public Pelapor(String id_user, String nama, String username, String password, String email,
+                           Date tanggal_lahir, JenisKelamin jenis_kelamin, Date tanggal_daftar) {
+                super(id_user, nama, username, password, email);
+                this.tanggal_lahir = tanggal_lahir;
+                this.jenis_kelamin = jenis_kelamin;
+                this.tanggal_daftar = tanggal_daftar;
+            }
+
+            // ==================== Getter & Setter ====================
         }
-
-        // ==================== Getter & Setter ====================
-    }
-```
+        ```
 
      b. Admin
         Kelas Admin juga mewarisi User dan menambahkan atribut `kontak_admin` untuk menyimpan informasi kontak administrator. Kelas ini digunakan untuk mengelola data pelapor dan memverifikasi laporan yang masuk ke sistem.
-        
-```
-    @Entity
-    @Table(name = "admin")
-    @PrimaryKeyJoinColumn(name = "id_user")
-    public class Admin extends User {
 
-        @Column(name = "kontak_admin")
-        private String kontak_admin;
+        ```
+        @Entity
+        @Table(name = "admin")
+        @PrimaryKeyJoinColumn(name = "id_user")
+        public class Admin extends User {
 
-        public Admin() {}
+            @Column(name = "kontak_admin")
+            private String kontak_admin;
 
-        public Admin(String id_user, String nama, String username, String password, String email, String kontak_admin) {
-            super(id_user, nama, username, password, email);
-            this.kontak_admin = kontak_admin;
+            public Admin() {}
+
+            public Admin(String id_user, String nama, String username, String password, String email, String kontak_admin) {
+                super(id_user, nama, username, password, email);
+                this.kontak_admin = kontak_admin;
+            }
+
+            public String getKontak_admin() {
+                return kontak_admin;
+            }
+
+            public void setKontak_admin(String kontak_admin) {
+                this.kontak_admin = kontak_admin;
+            }    
         }
+        ```
 
-        public String getKontak_admin() {
-            return kontak_admin;
-        }
-
-        public void setKontak_admin(String kontak_admin) {
-            this.kontak_admin = kontak_admin;
-        }    
-    }
-``` 
-     
 4. Abstraction
    
 5. Polymorphism
