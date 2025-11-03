@@ -9,12 +9,10 @@ Anggota Kelompok:
 
 4. Nadila Putri | 2409116052
 
-# TRUTHLINK
+# TruthLink
 <p align="center">
 masukin logo kesini
 </p>
-
-# Deskripsi Program TruthLink
 Program ini merupakan sistem pelaporan digital berbasis Website yang  dirancang sebagai upaya mendukung tercapainya Sustainable Development Goals (SDG) 16: Peace, Justice, and Strong Institutions, dengan menyediakan wadah pelaporan yang aman, cepat, dan transparan bagi masyarakat. Melalui sistem ini, pengguna dapat membuat laporan mengenai tindak kekerasan, korupsi, diskriminasi, pelanggaran HAM, hingga penyalahgunaan kekuasaan, yang kemudian diverifikasi dan ditindaklanjuti oleh pihak admin maupun lembaga terkait.
 
 Program ini bertujuan untuk membangun manajemen laporan yang efisien dan terstruktur, memastikan setiap laporan ditangani dengan proses verifikasi yang transparan dan akurat, serta meningkatkan akuntabilitas lembaga dalam menindaklanjuti laporan masyarakat. Secara keseluruhan, sistem ini diharapkan dapat meningkatkan transparansi, melindungi pelapor, serta mendorong terciptanya pemerintahan yang lebih adil dan berintegritas melalui pemanfaatan teknologi digital.
@@ -23,35 +21,80 @@ Program ini bertujuan untuk membangun manajemen laporan yang efisien dan terstru
 
 ## Flowchart
 
-1. Flowchart Menu Utama
+<details>
+  <summary>1. Flowchart Menu Utama</summary>
    
-3. Flowcharrt Registrasi
+</details>
+
+<details>
+  <summary>2. Flowcharrt Registrasi</summary>
    
-5. Flowchart Login User
+</details>
+
+<details>
+  <summary>3. Flowchart Login User</summary>
    
-7. Flowchart About
+</details>
+
+<details>
+  <summary>4. Flowchart About</summary>
    
-9. Flowchart Guide
-    
-11. Flowchart Others
-    
-13. Flowchart Menu Admin
-    
-15. Flowchart Laporan
-    
-17. Flowchart Tanggapan
-    
-19. Flowchart Lembaga
-    
-21. Flowchart Lembaga
-    
-23. Flowchart Menu Pelapor
-    
-25. Flowchart Lihat Pentunjuk
-    
-27. Flowchart Buat Laporan
-    
-29. Flowchart Baca Laporan
+</details>
+
+<details>
+  <summary>5. Flowchart Guide</summary>
+   
+</details>
+
+<details>
+  <summary>6. Flowchart Others</summary>
+   
+</details>
+
+<details>
+  <summary>7. Flowchart Menu Admin</summary>
+   
+</details>
+   
+<details>
+  <summary>8. Flowchart Laporan</summary>
+   
+</details>
+   
+<details>
+  <summary>9. Flowchart Tanggapan</summary>
+   
+</details>
+
+<details>
+  <summary>10. Flowchart Lembaga</summary>
+   
+</details>    
+
+<details>
+  <summary>11. Flowchart Lembaga</summary>
+   
+</details>    
+
+<details>
+  <summary>12. Flowchart Menu Pelapor</summary>
+   
+</details>  
+
+<details>
+  <summary>13. Flowchart Lihat Pentunjuk</summary>
+   
+</details>  
+
+<details>
+  <summary>14. Flowchart Buat Laporan</summary>
+   
+</details>  
+
+<details>
+  <summary>15. Flowchart Baca Laporan</summary>
+   
+</details>  
 
 ## Use Case Diagram
 1.  Use Case Diagram TruthLink
