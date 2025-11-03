@@ -98,8 +98,11 @@ Program ini bertujuan untuk membangun manajemen laporan yang efisien dan terstru
    
 </details>  
 
-## Use Case Diagram
-1.  Use Case Diagram TruthLink
+## Use Case Diagram 
+<details>
+  <summary>Use Case Diagram TruthLink</summary>
+   
+</details>
 
 # Fitur Program
 Program ini dilengkapi dengan berbagai fitur utama untuk mendukung pengelolaan data laporan secara efektif, efisien, dan transparan, baik bagi pelapor maupun admin, yaitu:
