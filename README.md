@@ -459,7 +459,7 @@ Aplikasi ini dikembangkan untuk memudahkan pengguna dalam mengelola data secara 
         @OneToMany(mappedBy = "userPelapor", cascade = CascadeType.ALL)
         private List<Laporan> laporanList;
     }
-    ```
+```
 
    Melalui pendekatan ini, setiap kelas turunan seperti `Admin` atau `Pelapor` dapat mewarisi atribut dan relasi umum dari `User`, namun tetap memiliki karakteristik dan fungsi tambahan sesuai kebutuhan masing-masing.
 
