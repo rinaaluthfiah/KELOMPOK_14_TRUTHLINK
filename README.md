@@ -478,6 +478,145 @@ Aplikasi ini dikembangkan untuk memudahkan pengguna dalam mengelola data secara 
 
 # Cara Menggunakan Program
 
+## Halaman Utama
+
+<img width="921" height="658" alt="image" src="https://github.com/user-attachments/assets/66b5c527-c6c1-427f-85b2-442dab1a30eb" />
+
+
+## Halaman Tentang Kami
+
+<img width="946" height="679" alt="image" src="https://github.com/user-attachments/assets/c1d31b0f-5b7d-46ab-bf37-3e1524851a42" />
+
+
+## Halaman Panduan
+
+<img width="921" height="692" alt="image" src="https://github.com/user-attachments/assets/fa23920f-6e95-4cea-8854-edc8fd174bc5" />
+
+
+## Halaman Lainnya
+
+<img width="896" height="658" alt="image" src="https://github.com/user-attachments/assets/19f27817-7238-4490-a77c-dbdfe50b1c19" />
+
+
+## Registrasi Akun
+
+<img width="902" height="681" alt="image" src="https://github.com/user-attachments/assets/dbbf2856-1891-4aab-bf9a-f8d8bb2fc4b0" />
+
+## Role Pelapor
+
+<img width="922" height="658" alt="image" src="https://github.com/user-attachments/assets/a46e7946-5318-4f8c-bd15-26daebaaad35" />
+
+### Menu Pelapor
+
+<img width="921" height="679" alt="image" src="https://github.com/user-attachments/assets/709a1f77-9d70-4352-8625-5125d6d3acac" />
+
+
+### Panduan
+
+<img width="921" height="692" alt="image" src="https://github.com/user-attachments/assets/2b5a1d26-18c6-406a-93a0-60de6d838391" />
+
+### Membuat Laporan
+
+
+<img width="921" height="692" alt="image" src="https://github.com/user-attachments/assets/b12c59e8-1b5a-4f30-86a4-c7794b2f6510" />
+
+
+
+<img width="919" height="690" alt="image" src="https://github.com/user-attachments/assets/48ab7bb3-e78c-4aa0-8391-c0409b4975d0" />
+
+
+
+<img width="916" height="693" alt="image" src="https://github.com/user-attachments/assets/b9c88c88-06d4-45fa-bfe5-7df855930e86" />
+
+### Melihat Riwayat Laporan
+
+
+<img width="934" height="692" alt="image" src="https://github.com/user-attachments/assets/572b1887-39e5-4c77-8129-cc4f90d2ed90" />
+
+### Mengedit Laporan
+
+
+<img width="934" height="692" alt="image" src="https://github.com/user-attachments/assets/ba617e9d-df78-44af-953f-82e23476e2d1" />
+
+
+<img width="921" height="692" alt="image" src="https://github.com/user-attachments/assets/8fc4c28e-8d5a-4a3e-bacd-a0bcb5030490" />
+
+
+# Menghapus Laporan
+
+
+<img width="931" height="691" alt="image" src="https://github.com/user-attachments/assets/d85a5395-eb15-4ec7-82bb-0120d35b12bb" />
+
+
+
+
+## Role Admin
+
+<img width="923" height="660" alt="image" src="https://github.com/user-attachments/assets/1cd512c5-1808-4ada-99e3-23dbcd4a94d4" />
+
+
+### Menu Admin
+
+<img width="921" height="692" alt="image" src="https://github.com/user-attachments/assets/968a1772-d381-44d7-bedc-3f7d32056fd6" />
+
+
+### Menu Lihat Laporan
+
+<img width="934" height="679" alt="image" src="https://github.com/user-attachments/assets/be0a471f-3fc1-4f22-8905-7c516e1c3158" />
+
+
+### Mengedit Laporan
+
+<img width="934" height="679" alt="image" src="https://github.com/user-attachments/assets/02c2ddb1-5867-4ed2-a234-a0c932ed01f6" />
+
+PILIH laporan yang mau diedit:P
+
+
+
+<img width="921" height="692" alt="image" src="https://github.com/user-attachments/assets/8a8d2537-70fc-496a-8638-3d25c845a21e" />
+
+
+### Menghapus Laporan
+
+<img width="935" height="670" alt="image" src="https://github.com/user-attachments/assets/d8fce4ce-4188-4610-82e9-2a74032f2e42" />
+
+### Memberi Tanggapan
+
+<img width="921" height="692" alt="image" src="https://github.com/user-attachments/assets/e0846cb4-f39e-4316-8502-2e4e4a578f77" />
+
+
+### Menu Lihat Tanggapan
+
+<img width="934" height="679" alt="image" src="https://github.com/user-attachments/assets/bea164d0-67ef-4f8f-a1cc-51867a80afc6" />
+
+
+### Menghapus Tanggapan
+
+<img width="929" height="673" alt="image" src="https://github.com/user-attachments/assets/e8b09a14-390d-454b-b472-b90a0c4d75db" />
+
+
+### Menu Lihat Lembaga
+
+<img width="921" height="679" alt="image" src="https://github.com/user-attachments/assets/0c35b9d0-dfbf-4fde-9af6-76d0bb564802" />
+
+
+### Menambah Lembaga
+
+<img width="921" height="679" alt="image" src="https://github.com/user-attachments/assets/67372f79-ede9-4bfc-a272-095b25eda810" />
+
+
+### Menghapus Lembaga
+
+<img width="917" height="667" alt="image" src="https://github.com/user-attachments/assets/a5da1029-1618-47ff-952f-88d9759ed552" />
+
+### Keluar Dari Menu
+
+<img width="916" height="691" alt="image" src="https://github.com/user-attachments/assets/d00f2294-617e-4f0b-bd17-21119ae68519" />
+
+
+
+
+
 
 
 
