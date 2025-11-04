@@ -1,4 +1,4 @@
-/># TruthLink ⚖️
+# TruthLink ⚖️
 
 <p align="center">
   <img width="545" height="589" alt="Tak berjudul27_20251023092038" src="https://github.com/user-attachments/assets/deaf598f-fec5-43cd-9c56-ca3f501567d3" /><br>
