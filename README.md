@@ -1,4 +1,4 @@
-<img width="1941" height="251" alt="TruthLink-Guide drawio" src="https://github.com/user-attachments/assets/259c3031-6d9c-4cba-ac14-5e91a73cce5b" /># TruthLink ⚖️
+/># TruthLink ⚖️
 
 <p align="center">
   <img width="545" height="589" alt="Tak berjudul27_20251023092038" src="https://github.com/user-attachments/assets/deaf598f-fec5-43cd-9c56-ca3f501567d3" /><br>
@@ -87,7 +87,6 @@ Aplikasi ini dikembangkan untuk memudahkan pengguna dalam mengelola data secara 
 
 <details>
   <summary>1. Flowchart Menu Utama</summary>
-   <img width="400" height="500" alt="Tak berjudul27_20251023092038" src="https://github.com/user-attachments/assets/3951c018-eaa5-4577-a087-b31533d5c1a8" />
    <img width="2196" height="466" alt="TruthLink-HomePage drawio" src="https://github.com/user-attachments/assets/488c7993-eecf-4068-bccf-13ee063a271b" />
 </details>
 
@@ -478,6 +477,7 @@ Aplikasi ini dikembangkan untuk memudahkan pengguna dalam mengelola data secara 
 
 
 # Cara Menggunakan Program
+
 
 
 
