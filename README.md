@@ -1,25 +1,87 @@
-# KELOMPOK 14 TRUTHLINK
+# TruthLink ⚖️
 
-Anggota Kelompok:
-1. Chiqo Nanda Rial Pratama | 2409116046
-
-2. Isrina Luthfiah | 2409116003
-
-3. Rini Wulandari | 2409116048
-
-4. Nadila Putri | 2409116052
-
-# TruthLink
 <p align="center">
-  <img width="400" height="500" alt="Tak berjudul27_20251023092038" src="https://github.com/user-attachments/assets/3951c018-eaa5-4577-a087-b31533d5c1a8" />
-      
-Deskripsi Singkat Program:
+  <img width="545" height="589" alt="Tak berjudul27_20251023092038" src="https://github.com/user-attachments/assets/deaf598f-fec5-43cd-9c56-ca3f501567d3" /><br>
+  <b>Peace, Justice and Strong Institution!</b>
+</p>
 
-Program ini merupakan sistem pelaporan digital berbasis Website yang  dirancang sebagai upaya mendukung tercapainya Sustainable Development Goals (SDG) 16: Peace, Justice, and Strong Institutions, dengan menyediakan wadah pelaporan yang aman, cepat, dan transparan bagi masyarakat. Melalui sistem ini, pengguna dapat membuat laporan mengenai tindak kekerasan, korupsi, diskriminasi, pelanggaran HAM, hingga penyalahgunaan kekuasaan, yang kemudian diverifikasi dan ditindaklanjuti oleh pihak admin maupun lembaga terkait.
 
-Program ini bertujuan untuk membangun manajemen laporan yang efisien dan terstruktur, memastikan setiap laporan ditangani dengan proses verifikasi yang transparan dan akurat, serta meningkatkan akuntabilitas lembaga dalam menindaklanjuti laporan masyarakat. Secara keseluruhan, sistem ini diharapkan dapat meningkatkan transparansi, melindungi pelapor, serta mendorong terciptanya pemerintahan yang lebih adil dan berintegritas melalui pemanfaatan teknologi digital.
+
+# 👩‍💻 Kontributor 
+
+| Isrina Luthfiah | Chiqo Nanda Rial Pratama | Rini Wulandari| Nadila Putri |
+|---------------|------------|------|--------------------|
+| ![WhatsApp Image 2025-05-08 at 11 42 13 (1)](https://github.com/user-attachments/assets/b58f52b9-7692-4c50-811a-0fefba46169f)| ![WhatsApp Image 2025-11-03 at 18 43 05](https://github.com/user-attachments/assets/3a9bbb55-9637-468b-af41-63df7cf1e013) |![WhatsApp Image 2025-11-03 at 18 48 43 (1)](https://github.com/user-attachments/assets/69bd6828-1858-4461-9ae7-ab7b07e736bd)| <img width="318" height="359" alt="Screenshot 2025-11-04 132115" src="https://github.com/user-attachments/assets/055ecbb0-3505-4e25-b30b-9ed859fd4046" />|
+| 2409116003 | 2409116046 | 2409116048| 2409116052 | 
+| Sistem Informasi A '24 | Sistem Informasi B '24 |  Sistem Informasi B '24 |  Sistem Informasi B'24 | 
+
+
+
+# 📱 Deskripsi Program TruthLink
+
+TruthLink adalah sistem pelaporan digital berbasis website yang dirancang untuk mendukung tercapainya SDG 16: Peace, Justice, and Strong Institutions. Platform ini menjadi wadah pelaporan yang aman, cepat, dan transparan bagi masyarakat.
+Melalui sistem ini, pengguna dapat melaporkan berbagai kasus, seperti:
+
+• Kekerasan
+
+• Korupsi
+
+• Diskriminasi
+
+• Pelanggaran HAM
+
+• Penyalahgunaan kekuasaan
+
+Setiap laporan yang dikirim akan diterima oleh sistem, diperiksa kebenaran dan kelengkapannya oleh admin, lalu apabila dinyatakan tingkat keparahannya tinggi laporan tersebut akan diteruskan kepada lembaga atau instansi terkait untuk segera ditindaklanjuti.
+
+# 🌐 Teknologi  yang Digunakan
+Aplikasi ini dikembangkan untuk memudahkan pengguna dalam mengelola data secara tertata dan efisien. Pemilihan teknologi difokuskan agar program      mudah dikembangkan dan aman, diantaranya yaitu :
+
+1. Bahasa Pemrograman: Java dengan OOP, membuat kode modular dan mudah dikembangkan
+
+2. IDE: NetBeans, memudahkan pengembangan dan pengelolaan proyek
+
+3. GUI Framework: Java Swing, untuk antarmuka interaktif dan mudah digunakan
+
+4. Database: MySQL, menyimpan data secara aman dan permanen
+
+5. Server/Environment: XAMPP, untuk menjalankan aplikasi web dan database secara lokal
+
+6. ORM: Hibernate, mempermudah hubungan antara objek Java dan database
+
+7. Arsitektur: MVC, memisahkan logika, tampilan, dan kontrol data agar lebih terstruktur
+
+8. Desain: Figma, untuk merancang tampilan dan prototipe aplikasi
+  
+
+
+# 🔐 Fitur - Fitur Program
+
+🔹 Fitur untuk User (Pelapor)
+
+    Registrasi & Login: Membuat akun dan masuk ke sistem.
+    
+    Buat Laporan: Mengirim laporan beserta bukti (foto/dokumen).
+    
+    Lihat Status Laporan: Memantau laporan (Menunggu, Diproses, Diterima, Ditolak, Selesai).
+    
+    Lihat Tanggapan Admin:  Mengetahui hasil verifikasi atau tindak lanjut laporan.
+
+🔹 Fitur untuk Admin
+
+    Login Admin: Akses ke dashboard pengelolaan laporan.
+    
+    Verifikasi & Kelola Laporan: Melihat, memeriksa, dan mengubah status laporan.
+    
+    Memberi Tanggapan: Mengirim respon resmi kepada pelapor.
+    
+    Teruskan ke Lembaga: Mengirim laporan ke instansi terkait jika kasus serius.
+    
+    Searching & Filter: Mempermudah pencarian laporan berdasarkan kategori atau status.
+
 
 # Flowchart dan Use Case Diagram
+
 
 ## Flowchart
 
@@ -104,44 +166,6 @@ Program ini bertujuan untuk membangun manajemen laporan yang efisien dan terstru
    
 </details>
 
-# Fitur Program
-Program ini dilengkapi dengan berbagai fitur utama untuk mendukung pengelolaan data laporan secara efektif, efisien, dan transparan, baik bagi pelapor maupun admin, yaitu:
-
-## 1. Create 
-
-## 2. Read
-
-## 3.  Update 📝 contohnya
-Fitur Update memungkinkan user untuk melakukan perubahan data laporan yang sudah ada.
-Contohnya:
-- Pelapor dapat memperbarui isi laporan jika terdapat kesalahan atau ingin menambahkan bukti baru. Tapi jika laporan sudah dikirimkan ke lembaga maka laporan tidak bisa di edit lagi.
-- Admin dapat mengubah tingkat keparahan dari laporan yang dikirimkan pelapor dan juga status laporan, seperti Diterima / Dalam Proses /Ditolak / Selesai
- 
-<p align="center">
-<img width="911" height="626" alt="Screenshot 2025-11-02 182210" src="https://github.com/user-attachments/assets/04730e0c-6c6e-4d23-bb00-d0a8bfebece5"  width="400">
-</p>
-
-Dengan fitur ini, seluruh pihak dapat memperbarui informasi laporan secara dinamis sesuai perkembangan proses verifikasi.
-
-## 4. Delete  🗑
-
-
-## 5. Searching 🔎 & Filter
-Fitur ini berfungsi untuk memudahkan admin dalam menemukan laporan/tanggapan tertentu secara cepat dan akurat.
-Sistem menyediakan dua mekanisme pencarian data yang dapat digunakan secara terpisah maupun bersamaan:
-1. Searching (Pencarian):
-Admin dapat mengetik kata kunci tertentu (misalnya id_laporan, id_userPelapor, atau judul laporan) untuk menampilkan data yang relevan tanpa perlu menelusuri seluruh daftar laporan.
-
-2. Filter (Penyaringan):
-Admin juga dapat menyaring laporan berdasarkan kriteria tertentu, seperti:
-- Kategori laporan: Kekerasan, Korupsi, Diskriminasi, dan Pelanggaran HAM
-- Status laporan: Menunggu, Dalam Proses, Diterima, Ditolak, Selesai
-
-3. Kombinasi Searching dan Filter:
-Sistem juga mendukung penggunaan kedua fitur ini secara bersamaan.
-Contohnya, admin mencari kata kunci “kampus” dan menyaring laporan dengan kategori laporan “kekerasan”, sehingga hasil yang ditampilkan benar-benar sesuai dengan kebutuhan pencarian.
-
-Dengan adanya fitur ini, proses pengelolaan dan penelusuran laporan menjadi lebih efisien, cepat, dan terarah, baik untuk admin dalam melakukan verifikasi atau tindak lanjut laporan.
 
 # Penerapan OOP
 1. Encapsulation
