@@ -193,9 +193,9 @@ Aplikasi ini dikembangkan untuk memudahkan pengguna dalam mengelola data secara 
 # Penerapan OOP
 1. Encapsulation
    
-   Encapsulation merupakan salah satu pilar utama dalam Pemrograman Berorientasi Objek (PBO) yang bertujuan untuk melindungi data dari akses langsung dari luar kelas. Penerapan konsep ini dilakukan dengan menggunakan access modifier private pada atribut kelas dan menyediakan metode getter serta setter untuk mengakses atau memodifikasi nilai atribut tersebut. Dalam sistem ini, prinsip encapsulation diterapkan pada seluruh kelas entitas, seperti `User`, `Admin`, `Pelapor`, `Laporan`, dan `Tanggapan`. Hal ini menjaga integritas data serta keamanan informasi pengguna dalam sistem, karena setiap perubahan nilai atribut dilakukan secara terkontrol.
+   Encapsulation merupakan salah satu pilar utama dalam Pemrograman Berorientasi Objek (PBO) yang bertujuan untuk melindungi data dari akses langsung dari luar kelas. Penerapan konsep ini dilakukan dengan menggunakan access modifier private pada atribut kelas dan menyediakan metode getter serta setter untuk mengakses atau memodifikasi nilai atribut tersebut. Dalam sistem ini, prinsip encapsulation diterapkan pada seluruh kelas entitas, seperti `User.java`, `Admin.java`, `Pelapor.java`, `Laporan.java`, dan `Tanggapan.java`. Hal ini menjaga integritas data serta keamanan informasi pengguna dalam sistem, karena setiap perubahan nilai atribut dilakukan secara terkontrol.
 
-   Sebagai contoh implementasi pada kelas Laporan, atribut yang berfungsi merepresentasikan data laporan pengguna. Setiap atribut seperti `id_laporan`, `judul_laporan`, `isi_laporan`, dan `status` bersifat private, dan hanya dapat diakses melalui metode publik seperti `getJudul_laporan()` atau `setStatus()`.
+   Sebagai contoh implementasi pada kelas `Laporan.java`, atribut yang berfungsi merepresentasikan data laporan pengguna. Setiap atribut seperti `id_laporan`, `judul_laporan`, `isi_laporan`, dan `status` bersifat `private`, dan hanya dapat diakses melalui metode publik seperti `getJudul_laporan()` atau `setStatus()`.
 
     ```
     @Entity
@@ -293,7 +293,7 @@ Aplikasi ini dikembangkan untuk memudahkan pengguna dalam mengelola data secara 
     }
     ```
     
-   Kelas Laporan kemudian digunakan oleh kelas lain seperti AdminBagianMembacaLaporan untuk menampilkan data tanpa mengakses atribut secara langsung:
+   Kelas `Laporan.java` kemudian digunakan oleh kelas lain seperti `AdminBagianMembacaLaporan.java` untuk menampilkan data tanpa mengakses atribut secara langsung:
 
     ```
             for (Laporan lap : list) {
@@ -316,9 +316,10 @@ Aplikasi ini dikembangkan untuk memudahkan pengguna dalam mengelola data secara 
 2. Inheritance
    
    Inheritance merupakan pilar OOP yang memungkinkan suatu kelas (child/subclass) mewarisi properti dan metode dari kelas lain (parent/superclass), sehingga mengurangi redundansi dan meningkatkan efisiensi kode.
+   
    - Parent/Super Class
      
-     Pada sistem ini, kelas User berperan sebagai superclass yang berisi atribut umum seperti `id_user`, `nama`, `username`, `password`, dan `email`. Kelas ini juga merupakan entitas JPA yang dipetakan ke tabel user di database dan menggunakan strategi pewarisan `@Inheritance(strategy = InheritanceType.JOINED)`. Melalui strategi ini, setiap subclass memiliki tabel tersendiri yang bergabung dengan tabel user berdasarkan kolom `id_user`.
+     Pada sistem ini, kelas `User.java` berperan sebagai superclass yang berisi atribut umum seperti `id_user`, `nama`, `username`, `password`, dan `email`. Kelas ini juga merupakan entitas JPA yang dipetakan ke tabel user di database dan menggunakan strategi pewarisan `@Inheritance(strategy = InheritanceType.JOINED)`. Melalui strategi ini, setiap subclass memiliki tabel tersendiri yang bergabung dengan tabel `user` berdasarkan kolom `id_user`.
 
       ```
       @Entity
@@ -357,11 +358,11 @@ Aplikasi ini dikembangkan untuk memudahkan pengguna dalam mengelola data secara 
 
    - Child/Sub Class
      
-     Kelas turunan (subclass) mewarisi seluruh atribut dan perilaku dari User, serta menambahkan atribut baru yang lebih spesifik sesuai kebutuhan.
+     Kelas turunan (subclass) mewarisi seluruh atribut dan perilaku dari kelas `User.java`, serta menambahkan atribut baru yang lebih spesifik sesuai kebutuhan.
      
      a. Pelapor
      
-        Kelas Pelapor mewarisi User dan menambahkan atribut tambahan seperti `tanggal_lahir`, `jenis_kelamin`, dan `tanggal_daftar`. Kelas ini merepresentasikan pengguna yang berperan sebagai pelapor kasus dalam sistem.
+        Kelas `Pelapor.java` mewarisi `User.java` dan menambahkan atribut tambahan seperti `tanggal_lahir`, `jenis_kelamin`, dan `tanggal_daftar`. Kelas ini merepresentasikan pengguna yang berperan sebagai pelapor kasus dalam sistem.
      
         ```
         @Entity
@@ -395,7 +396,7 @@ Aplikasi ini dikembangkan untuk memudahkan pengguna dalam mengelola data secara 
 
      b. Admin
      
-        Kelas Admin juga mewarisi User dan menambahkan atribut `kontak_admin` untuk menyimpan informasi kontak administrator. Kelas ini digunakan untuk mengelola data pelapor dan memverifikasi laporan yang masuk ke sistem.
+        Kelas `Admin.java` juga mewarisi `User.java` dan menambahkan atribut `kontak_admin` untuk menyimpan informasi kontak administrator. Kelas ini digunakan untuk mengelola data pelapor dan memverifikasi laporan yang masuk ke sistem.
 
         ```
         @Entity
@@ -425,8 +426,9 @@ Aplikasi ini dikembangkan untuk memudahkan pengguna dalam mengelola data secara 
 
 3. Abstraction
    
-   Abstraction merupakan konsep dalam Pemrograman Berorientasi Objek (PBO) yang berfungsi untuk menyembunyikan detail implementasi dan hanya menampilkan bagian penting dari suatu kelas. Dalam sistem ini, abstraction diterapkan melalui kelas User, yang dideklarasikan sebagai kelas abstrak (abstract class) dan menjadi superclass bagi entitas Admin dan Pelapor.
-   Kelas User berisi atribut dan relasi umum seperti `id_user`, `nama`, `username`, `password`, dan `email`, serta hubungan ke entitas Laporan. Namun, kelas ini tidak dapat diinstansiasi langsung karena hanya berfungsi sebagai kerangka dasar bagi kelas turunan yang memiliki perilaku spesifik masing-masing.
+   Abstraction merupakan konsep dalam Pemrograman Berorientasi Objek (PBO) yang berfungsi untuk menyembunyikan detail implementasi dan hanya menampilkan struktur penting yang perlu diketahui oleh kelas lain. Dalam sistem ini, abstraction diterapkan melalui kelas `User.java`, yang dideklarasikan sebagai abstract class dan berperan sebagai cetak biru (blueprint) bagi kelas `Admin.java` dan `Pelapor.java`.
+
+   Berbeda dengan kelas biasa, User tidak dapat diinstansiasi secara langsung, melainkan hanya dapat digunakan melalui kelas turunannya. Hal ini memastikan bahwa setiap objek yang dibuat dari kelas User memiliki bentuk yang spesifik (sebagai Admin atau Pelapor), namun tetap mengikuti struktur dasar yang sama.
    
     ```
     @Entity
@@ -488,11 +490,11 @@ Aplikasi ini dikembangkan untuk memudahkan pengguna dalam mengelola data secara 
    }
    ```
 
-   Pada kode di atas, objek bertipe `LaporanDao` dapat merujuk ke berbagai kelas implementasi `LaporanIml` tanpa perlu mengetahui detail cara kerjanya. Ketika metode `save()` dipanggil melalui referensi `LaporanDao`, Java secara otomatis menjalankan versi metode yang sesuai dengan kelas implementasi yang aktif, inilah yang disebut runtime polymorphism.
+   Pada kode di atas, objek bertipe `LaporanDao` dapat merujuk ke berbagai kelas implementasi `LaporanIml.java` tanpa perlu mengetahui detail cara kerjanya. Ketika metode `save()` dipanggil melalui referensi `LaporanDao`, Java secara otomatis menjalankan versi metode yang sesuai dengan kelas implementasi yang aktif, inilah yang disebut runtime polymorphism.
 
 5. Interface
    
-   Interface merupakan kontrak atau blueprint yang mendefinisikan kumpulan metode tanpa implementasi, yang harus di-override oleh kelas yang mengimplementasikannya. Dalam sistem ini, Interface digunakan untuk mendefinisikan kontrak atau blueprint metode tanpa implementasi. Dalam sistem ini, LaporanDao menjadi interface yang mendefinisikan operasi dasar terhadap entitas `Laporan`, seperti `save()`, `getAll()`, `delete()` dst. Kelas `LaporanIml.java` kemudian mengimplementasikan semua metode tersebut dengan logika spesifik menggunakan Hibernate. Dengan pemisahan ini, sistem menjadi lebih modular dan fleksibel, karena kode utama tidak bergantung langsung pada implementasi tertentu cukup pada interface-nya saja.
+   Interface merupakan kontrak atau blueprint yang mendefinisikan kumpulan metode tanpa implementasi, yang harus di-override oleh kelas yang mengimplementasikannya. Dalam sistem ini, Interface digunakan untuk mendefinisikan kontrak atau blueprint metode tanpa implementasi. Dalam sistem ini, `LaporanDao.java` menjadi interface yang mendefinisikan operasi dasar terhadap entitas `Laporan`, seperti `save()`, `getAll()`, `delete()` dst. Kelas `LaporanIml.java` kemudian mengimplementasikan semua metode tersebut dengan logika spesifik menggunakan Hibernate. Dengan pemisahan ini, sistem menjadi lebih modular dan fleksibel, karena kode utama tidak bergantung langsung pada implementasi tertentu cukup pada interface-nya saja.
    
    ```
    public interface LaporanDao {
