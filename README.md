@@ -1,4 +1,4 @@
-# TruthLink ⚖️
+<img width="1941" height="251" alt="TruthLink-Guide drawio" src="https://github.com/user-attachments/assets/259c3031-6d9c-4cba-ac14-5e91a73cce5b" /># TruthLink ⚖️
 
 <p align="center">
   <img width="545" height="589" alt="Tak berjudul27_20251023092038" src="https://github.com/user-attachments/assets/deaf598f-fec5-43cd-9c56-ca3f501567d3" /><br>
@@ -88,82 +88,106 @@ Aplikasi ini dikembangkan untuk memudahkan pengguna dalam mengelola data secara 
 <details>
   <summary>1. Flowchart Menu Utama</summary>
    <img width="400" height="500" alt="Tak berjudul27_20251023092038" src="https://github.com/user-attachments/assets/3951c018-eaa5-4577-a087-b31533d5c1a8" />
+   <img width="2196" height="466" alt="TruthLink-HomePage drawio" src="https://github.com/user-attachments/assets/488c7993-eecf-4068-bccf-13ee063a271b" />
 </details>
 
 <details>
-  <summary>2. Flowcharrt Registrasi</summary>
-   
+  <summary>2. Flowchart Registrasi</summary>
+  <img width="1442" height="216" alt="TruthLink-Register drawio" src="https://github.com/user-attachments/assets/9dda7e17-ffcd-4218-8605-b241c15ebe21" />
+
 </details>
 
 <details>
   <summary>3. Flowchart Login User</summary>
+  <img width="1895" height="311" alt="TruthLink-Login drawio" src="https://github.com/user-attachments/assets/0b3c0e7a-0f31-45a5-87b4-48c80a63554f" />
    
 </details>
 
 <details>
   <summary>4. Flowchart About</summary>
-   
+   <img width="1941" height="251" alt="TruthLink-About drawio" src="https://github.com/user-attachments/assets/799a88b3-d228-4194-ac57-81cac47ac6e0" />
+
 </details>
 
 <details>
   <summary>5. Flowchart Guide</summary>
-   
+   <img width="1941" height="251" alt="TruthLink-Guide drawio" src="https://github.com/user-attachments/assets/244cf1ed-9d2b-4af6-a0ff-32b189166638" />
+
 </details>
 
 <details>
   <summary>6. Flowchart Others</summary>
-   
+   <img width="1941" height="251" alt="TruthLink-Others drawio" src="https://github.com/user-attachments/assets/8c653743-9b26-40b0-a8dd-7093c39f763e" />
+
 </details>
 
 <details>
   <summary>7. Flowchart Menu Admin</summary>
-   
+   <img width="1941" height="251" alt="TruthLink-Others drawio" src="https://github.com/user-attachments/assets/0e2bd3ce-be5c-407c-bcdc-7eea3c40d2ee" />
+
 </details>
    
 <details>
   <summary>8. Flowchart Laporan</summary>
-   
+  <img width="2281" height="888" alt="TruthLink-Laporan drawio (1)" src="https://github.com/user-attachments/assets/f3da4c46-bbeb-48fb-b039-2e13dbb8f6db" />
+
 </details>
    
 <details>
   <summary>9. Flowchart Tanggapan</summary>
-   
+<img width="1842" height="870" alt="TruthLink-Tanggapan drawio (1)" src="https://github.com/user-attachments/assets/f66552b1-2449-456e-9f5e-293c15772702" />
+
+
 </details>
 
 <details>
   <summary>10. Flowchart Lembaga</summary>
+  <img width="2021" height="888" alt="TruthLink-Lembaga drawio (1)" src="https://github.com/user-attachments/assets/b7597f08-10d3-44d9-93cc-0beb78d48274" />
+
+</details>    
+
+<details>
+  <summary>11. Flowchart Beri Tanggapan</summary>
+   <img width="776" height="346" alt="TruthLink-Beri Tanggapan drawio" src="https://github.com/user-attachments/assets/c0b1c0e3-09e0-4771-b2fe-2d3a1719b934" />
+
+</details>    
+
+<details>
+  <summary>12. Flowchart Mengedit Laporan</summary>
+<img width="1071" height="251" alt="TruthLink-Mengedit Laporan drawio" src="https://github.com/user-attachments/assets/75ee8904-bca9-49ef-9ac7-937399f45998" />
    
 </details>    
 
 <details>
-  <summary>11. Flowchart Lembaga</summary>
-   
-</details>    
-
-<details>
-  <summary>12. Flowchart Menu Pelapor</summary>
+  <summary>13. Flowchart Menu Pelapor</summary>
+  <img width="1561" height="206" alt="TruthLink-Menu Pelapor drawio (1)" src="https://github.com/user-attachments/assets/76e3d8e8-2a1d-44a9-b3c7-dd7d0219cac3" />
    
 </details>  
 
 <details>
-  <summary>13. Flowchart Lihat Pentunjuk</summary>
+  <summary>14. Flowchart Lihat Petunjuk</summary>
+  <img width="1651" height="326" alt="TruthLink-Lihat Petunjuk drawio (1)" src="https://github.com/user-attachments/assets/eb7df7f8-c092-4f49-a4e0-65464e3ea59b" />
+
+</details>  
+
+<details>
+  <summary>15. Flowchart Buat Laporan</summary>
+<img width="2076" height="593" alt="TruthLink-Buat Laporan drawio" src="https://github.com/user-attachments/assets/828fc14d-0165-4d4c-a02b-5a5ed3dba078" />
+
    
 </details>  
 
 <details>
-  <summary>14. Flowchart Buat Laporan</summary>
-   
-</details>  
+  <summary>16. Flowchart Baca Laporan</summary>
+<img width="1286" height="1291" alt="TruthLink-Baca Laporan  drawio" src="https://github.com/user-attachments/assets/7bb1663f-27a7-4585-9a6f-b171e4a00cfb" />
 
-<details>
-  <summary>15. Flowchart Baca Laporan</summary>
    
 </details>  
 
 ## Use Case Diagram 
 <details>
   <summary>Use Case Diagram TruthLink</summary>
-   
+   <img width="989" height="1388" alt="UseCase drawio" src="https://github.com/user-attachments/assets/a7fb8431-9ba4-4709-a0ee-87a000319d84" />
 </details>
 
 
