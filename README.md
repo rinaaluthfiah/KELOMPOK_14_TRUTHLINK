@@ -531,7 +531,7 @@ Aplikasi ini dikembangkan untuk memudahkan pengguna dalam mengelola data secara 
 
 <p align="center">
 <img width="650" height="500" alt="image" src="https://github.com/user-attachments/assets/46da45ed-7f99-4020-bff6-8f12c46a11f2" />
-<p>
+<p> 
 
 
 ## 1. Source Packages
