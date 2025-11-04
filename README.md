@@ -193,7 +193,7 @@ Aplikasi ini dikembangkan untuk memudahkan pengguna dalam mengelola data secara 
 # Penerapan OOP
 1. Encapsulation
    
-   Encapsulation merupakan salah satu pilar utama dalam Pemrograman Berorientasi Objek (PBO) yang bertujuan untuk melindungi data dari akses langsung dari luar kelas. Penerapan konsep ini dilakukan dengan menggunakan access modifier private pada atribut kelas dan menyediakan metode getter serta setter untuk mengakses atau memodifikasi nilai atribut tersebut. Dalam sistem ini, prinsip encapsulation diterapkan pada seluruh kelas entitas, seperti `User`, `Admin`, `Pelapor`, `Laporan`, dan `Tanggapan`.
+   Encapsulation merupakan salah satu pilar utama dalam Pemrograman Berorientasi Objek (PBO) yang bertujuan untuk melindungi data dari akses langsung dari luar kelas. Penerapan konsep ini dilakukan dengan menggunakan access modifier private pada atribut kelas dan menyediakan metode getter serta setter untuk mengakses atau memodifikasi nilai atribut tersebut. Dalam sistem ini, prinsip encapsulation diterapkan pada seluruh kelas entitas, seperti `User`, `Admin`, `Pelapor`, `Laporan`, dan `Tanggapan`. Hal ini menjaga integritas data serta keamanan informasi pengguna dalam sistem, karena setiap perubahan nilai atribut dilakukan secara terkontrol.
 
    Sebagai contoh implementasi pada kelas Laporan, atribut yang berfungsi merepresentasikan data laporan pengguna. Setiap atribut seperti `id_laporan`, `judul_laporan`, `isi_laporan`, dan `status` bersifat private, dan hanya dapat diakses melalui metode publik seperti `getJudul_laporan()` atau `setStatus()`.
 
@@ -312,8 +312,6 @@ Aplikasi ini dikembangkan untuk memudahkan pengguna dalam mengelola data secara 
                 });
             }
     ```
-
-   Selain pada kelas User, prinsip encapsulation juga diterapkan pada kelas lain seperti Admin, Pelapor, Laporan, dan Tanggapan, di mana setiap atribut private dikelola melalui metode getter dan setter. Hal ini menjaga integritas data serta keamanan informasi pengguna dalam sistem, karena setiap perubahan nilai atribut dilakukan secara terkontrol.
    
 2. Inheritance
    
@@ -452,12 +450,62 @@ Aplikasi ini dikembangkan untuk memudahkan pengguna dalam mengelola data secara 
     }
     ```
 
-   Melalui pendekatan ini, setiap kelas turunan seperti Admin atau Pelapor dapat mewarisi atribut dan relasi umum dari User, namun tetap memiliki karakteristik dan fungsi tambahan sesuai kebutuhan masing-masing.
+   Melalui pendekatan ini, setiap kelas turunan seperti `Admin` atau `Pelapor` dapat mewarisi atribut dan relasi umum dari `User`, namun tetap memiliki karakteristik dan fungsi tambahan sesuai kebutuhan masing-masing.
 
 
-6. Polymorphism
+4. Polymorphism
    
-7. Interface
+   Polymorphism merupakan salah satu pilar penting dalam Pemrograman Berorientasi Objek (PBO) yang memungkinkan suatu objek memiliki banyak bentuk dan berperilaku berbeda tergantung pada konteks pemanggilannya. Dalam sistem ini, konsep polymorphism diterapkan melalui kelas implementasi yang meng-override metode dari interface DAO. Sebagai contoh, pada kelas `LaporanIml.java` yang mengimplementasikan interface `LaporanDao.java`, setiap metode seperti `save()`, `getById()`, `getAll()`, `update()`, `delete()` dst. di-override dengan perilaku yang disesuaikan untuk entitas `Laporan.java`:
+   
+   ```
+   public class LaporanIml implements LaporanDao {
+       @Override
+       public void save(Laporan laporan) {
+       Transaction tx = null;
+           try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+               tx = session.beginTransaction();
+               session.persist(laporan);
+               tx.commit();
+           } catch (Exception e) {
+               if (tx != null) tx.rollback();
+               e.printStackTrace();
+           }
+       }
+  
+       @Override
+       public Laporan getById(String id) {
+           try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+               return session.get(Laporan.class, id);
+           }
+       }
+  
+       @Override
+       public List<Laporan> getAll() {
+           try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+               return session.createQuery("from Laporan", Laporan.class).list();
+           }
+       }
+   }
+   ```
+
+   Pada kode di atas, objek bertipe `LaporanDao` dapat merujuk ke berbagai kelas implementasi `LaporanIml` tanpa perlu mengetahui detail cara kerjanya. Ketika metode `save()` dipanggil melalui referensi `LaporanDao`, Java secara otomatis menjalankan versi metode yang sesuai dengan kelas implementasi yang aktif, inilah yang disebut runtime polymorphism.
+
+5. Interface
+   
+   Interface merupakan kontrak atau blueprint yang mendefinisikan kumpulan metode tanpa implementasi, yang harus di-override oleh kelas yang mengimplementasikannya. Dalam sistem ini, Interface digunakan untuk mendefinisikan kontrak atau blueprint metode tanpa implementasi. Dalam sistem ini, LaporanDao menjadi interface yang mendefinisikan operasi dasar terhadap entitas `Laporan`, seperti `save()`, `getAll()`, `delete()` dst. Kelas `LaporanIml.java` kemudian mengimplementasikan semua metode tersebut dengan logika spesifik menggunakan Hibernate. Dengan pemisahan ini, sistem menjadi lebih modular dan fleksibel, karena kode utama tidak bergantung langsung pada implementasi tertentu cukup pada interface-nya saja.
+   
+   ```
+   public interface LaporanDao {
+       void save(Laporan laporan);
+       Laporan getById(String id);
+       List<Laporan> getAll();
+       void update(Laporan laporan);
+       void delete(Laporan laporan);
+    
+       public long countAll();
+       public String getMostFrequentKategori();
+   }
+   ```
 
 # Struktur Folder/Package
 <p align="center">
@@ -469,7 +517,7 @@ Aplikasi ini dikembangkan untuk memudahkan pengguna dalam mengelola data secara 
    
 3. Other Sources
    
-6. Dependencies
+4. Dependencies
 
 
 
