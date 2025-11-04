@@ -2,7 +2,7 @@
 
 <p align="center">
   <img width="545" height="589" alt="Tak berjudul27_20251023092038" src="https://github.com/user-attachments/assets/deaf598f-fec5-43cd-9c56-ca3f501567d3" /><br>
-  <b>Peace, Justice and Strong Institution!</b>
+  <b>Peace, Justice and Strong Institutions!</b>
 </p>
 
 
@@ -191,7 +191,8 @@ Aplikasi ini dikembangkan untuk memudahkan pengguna dalam mengelola data secara 
 
 
 # Penerapan OOP
-1. Encapsulation
+
+## 1. Encapsulation
    
    Encapsulation merupakan salah satu pilar utama dalam Pemrograman Berorientasi Objek (PBO) yang bertujuan untuk melindungi data dari akses langsung dari luar kelas. Penerapan konsep ini dilakukan dengan menggunakan access modifier `private` pada atribut kelas dan menyediakan metode `getter` serta `setter` untuk mengakses atau memodifikasi nilai atribut tersebut. Dalam sistem ini, prinsip encapsulation diterapkan pada seluruh kelas entitas, seperti `User.java`, `Admin.java`, `Pelapor.java`, `Laporan.java`, dan `Tanggapan.java`. Hal ini menjaga integritas data serta keamanan informasi pengguna dalam sistem, karena setiap perubahan nilai atribut dilakukan secara terkontrol.
 
@@ -313,7 +314,7 @@ Aplikasi ini dikembangkan untuk memudahkan pengguna dalam mengelola data secara 
             }
     ```
    
-2. Inheritance
+## 2. Inheritance
    
    Inheritance merupakan pilar OOP yang memungkinkan suatu kelas (child/subclass) mewarisi properti dan metode dari kelas lain (parent/superclass), sehingga mengurangi redundansi dan meningkatkan efisiensi kode.
    
@@ -424,7 +425,7 @@ Aplikasi ini dikembangkan untuk memudahkan pengguna dalam mengelola data secara 
         }
         ```
 
-3. Abstraction
+## 3. Abstraction
    
    Abstraction merupakan konsep dalam Pemrograman Berorientasi Objek (PBO) yang berfungsi untuk menyembunyikan detail implementasi dan hanya menampilkan struktur penting yang perlu diketahui oleh kelas lain. Dalam sistem ini, abstraction diterapkan melalui kelas `User.java`, yang dideklarasikan sebagai abstract class dan berperan sebagai cetak biru (blueprint) bagi kelas `Admin.java` dan `Pelapor.java`.
 
@@ -455,7 +456,7 @@ Aplikasi ini dikembangkan untuk memudahkan pengguna dalam mengelola data secara 
    Melalui pendekatan ini, setiap kelas turunan seperti `Admin` atau `Pelapor` dapat mewarisi atribut dan relasi umum dari `User`, namun tetap memiliki karakteristik dan fungsi tambahan sesuai kebutuhan masing-masing.
 
 
-4. Polymorphism
+## 4. Polymorphism
    
    Polymorphism merupakan salah satu pilar penting dalam Pemrograman Berorientasi Objek (PBO) yang memungkinkan suatu objek memiliki banyak bentuk dan berperilaku berbeda tergantung pada konteks pemanggilannya. Dalam sistem ini, konsep polymorphism diterapkan melalui kelas implementasi yang meng-override metode dari interface DAO. Sebagai contoh, pada kelas `LaporanIml.java` yang mengimplementasikan interface `LaporanDao.java`, setiap metode seperti `save()`, `getById()`, `getAll()`, `update()`, `delete()` dst. di-override dengan perilaku yang disesuaikan untuk entitas `Laporan.java`:
    
@@ -492,7 +493,7 @@ Aplikasi ini dikembangkan untuk memudahkan pengguna dalam mengelola data secara 
 
    Pada kode di atas, objek bertipe `LaporanDao` dapat merujuk ke objek dari kelas `LaporanIml.java` tanpa perlu mengetahui detail implementasinya. Ketika metode `save()` dipanggil melalui referensi `LaporanDao.java`, Java secara otomatis menjalankan versi metode yang sesuai dengan kelas implementasi yang aktif, pemanggilan metode berdasarkan objek yang sebenarnya inilah yang disebut runtime polymorphism.
 
-6. Interface
+## 5. Interface
    
    Interface merupakan kontrak atau blueprint yang mendefinisikan kumpulan metode tanpa implementasi, yang harus di-override oleh kelas yang mengimplementasikannya. Dalam sistem ini, Interface digunakan untuk mendefinisikan kontrak atau blueprint metode tanpa implementasi. Dalam sistem ini, `LaporanDao.java` menjadi interface yang mendefinisikan operasi dasar terhadap entitas `Laporan`, seperti `save()`, `getAll()`, `delete()` dst. Kelas `LaporanIml.java` kemudian mengimplementasikan semua metode tersebut dengan logika spesifik menggunakan Hibernate. Dengan pemisahan ini, sistem menjadi lebih modular dan fleksibel, karena kode utama tidak bergantung langsung pada implementasi tertentu cukup pada interface-nya saja.
    
@@ -513,35 +514,137 @@ Aplikasi ini dikembangkan untuk memudahkan pengguna dalam mengelola data secara 
 <p align="center">
 <img width="650" height="500" alt="image" src="https://github.com/user-attachments/assets/46da45ed-7f99-4020-bff6-8f12c46a11f2" />
 <p>
-1. Source Packages
-  
-2. Test Packages
-   
-3. Other Sources
-   
-4. Dependencies
 
+
+## 1. Source Packages
+
+🗃️ Folder ini berisi seluruh source code utama dari program TruthLink. Disusun untuk untuk memastikan project tertata dengan baik, mudah dipahami, dan mendukung proses pengembangan secara terstruktur.Di dalamnya, struktur package diatur berdasarkan fungsi masing-masing.
+
+  📦 **Main** 
+
+       File utama untuk menjalankan program (entry point aplikasi).
+
+       
+
+  📦 **Dao (Data Access Object)**
+  
+      Berisi class yang menangani koneksi dan proses ke database,
+      termasuk operasi CRUD (Create, Read, Update, Delete).
+
+  📦 **Entity**
+  
+      Menyimpan class model yang merepresentasikan tabel di database
+      seperti: User, Laporan, Admin, Tanggapan, dll.
+
+  📦 **Frame**
+  
+      Folder untuk tampilan atau GUI aplikasi,
+      mencakup form login, registrasi, dashboard user/admin, dan form laporan.
+
+  📦 **Com.mycompany.linkkk**
+    
+      Package induk/utama yang menjadi struktur dasar project
+      dan menghubungkan seluruh package lainnya.>  
+    
+
+
+  
+## 2. Test Packages
+
+🗃️  Folder yang digunakan untuk menyimpan file atau kode pengujian (testing) pada program.
+    Fungsinya adalah untuk memastikan bahwa fitur atau fungsi dalam aplikasi berjalan sesuai yang diharapkan.
+
+    
+   
+## 3. Other Sources
+   
+🗃️   Digunakan untuk menyimpan file pendukung non-kode yang dibutuhkan oleh aplikasi agar dapat berjalan dengan baik. File-file di  dalam folder ini tidak berisi logika program, tetapi berfungsi sebagai sumber data atau konfigurasi yang dibaca oleh sistem.
+
+      Isi dan Kegunaannya, yaitu:
+
+     •  Gambar atau logo aplikasi  digunakan pada bagian tampilan program (GUI).
+
+     •  File konfigurasi, seperti hibernate.cfg.xml atau .properties  berfungsi untuk mengatur koneksi database, pengaturan Hibernate, atau setting aplikasi lainnya.     
+   
+## 4. Dependencies
+
+   🗃️  kumpulan file .jar atau library eksternal yang ditambahkan ke dalam project untuk membantu program berjalan dengan fitur  tambahan seperti koneksi database, ORM, logging, dan lainnya.
+
+ Library (.jar) dan   Fungsi Utamanya , yaitu: 
+
+ 🫙**hibernate-core-6.4.4.Final.jar**
+ 
+       Mengelola koneksi dan pengolahan database menggunakan Hibernate (ORM), sehingga mempermudah  pengaturan data tanpa SQL manual.
+   
+🫙 **jakarta.persistence-api-3.1.0.jar**
+
+      Menyediakan standar JPA untuk pemetaan objek Java menjadi tabel database. 
+  
+🫙 **mysql-connector-java-8.0.30.jar**
+
+      Driver yang digunakan agar aplikasi Java dapat terhubung dengan database MySQL.
+  
+🫙 **slf4j-api-2.0.9.jar & slf4j-simple-2.0.9.jar** 
+
+      Digunakan untuk logging, yaitu mencatat aktivitas sistem dan error agar mudah dipantau.
+  
+ 🫙**jakarta.transaction-api-2.0.1.jar** 
+   
+     Mengatur proses transaksi database (commit dan rollback) agar data tetap aman dan konsisten.
+   
+ 🫙 **protobuf-java-3.19.4.jar** 
+ 
+     Memproses dan mengelola data dalam format yang efisien (serialisasi data). 
 
 
 # Library / Framework
 
 
-# Cara Menggunakan Program
+# Cara Menggunakan Program 💻
 
 ## Halaman Utama
 
 <img width="921" height="658" alt="image" src="https://github.com/user-attachments/assets/66b5c527-c6c1-427f-85b2-442dab1a30eb" />
+
+- Menampilkan nama aplikasi dan deskripsi singkat mengenai fungsi TruthLink sebagai sistem pelaporan publik.
+
+- Dilengkapi menu navigasi seperti Beranda, Tentang Kami, Panduan, Lainnya, serta tombol Masuk dan Daftar.
+
+- Tersedia tombol “Lapor Sekarang” untuk memudahkan pelapor  membuat laporan.
+
+- Menggunakan latar belakang ilustrasi timbangan keadilan sebagai simbol keadilan dan transparansi.
+
 
 
 ## Halaman Tentang Kami
 
 <img width="946" height="679" alt="image" src="https://github.com/user-attachments/assets/c1d31b0f-5b7d-46ab-bf37-3e1524851a42" />
 
+Halaman ini berfungsi sebagai penjelasan visi, latar belakang, dan alasan dikembangkannya TruthLink. Melalui halaman ini, pengguna diperkenalkan pada tujuan utama sistem, yaitu mendukung tercapainya SDGs 16 (Peace, Justice, and Strong Institutions).
+
+**Isi utama halaman ini mencakup:**
+
+- Komitmen untuk membantu pencegahan kekerasan, korupsi, dan pelanggaran hukum.
+
+- Penjelasan bahwa TruthLink dikembangkan sebagai platform pelaporan digital yang aman, cepat, dan transparan.
+
+- Menyampaikan bahwa sistem ini menjadi sarana bagi masyarakat untuk menyuarakan laporan tanpa rasa takut.
+
+
 
 ## Halaman Panduan
 
 <img width="921" height="692" alt="image" src="https://github.com/user-attachments/assets/fa23920f-6e95-4cea-8854-edc8fd174bc5" />
 
+Halaman panduan berfungsi untuk membantu pengguna memahami cara menggunakan sistem TruthLink. Pada halaman ini, dijelaskan langkah-langkah mulai dari membuat akun, login, hingga cara melaporkan kasus secara benar dan aman.
+
+- Cara Registrasi dan Login : Penjelasan dasar agar pelapor bisa mengakses sistem.
+
+- Panduan Membuat Laporan : Berisi langkah-langkah mengisi judul, kategori laporan, isi laporan, dan mengunggah bukti.
+
+- Informasi Status Laporan : Menjelaskan arti status seperti Diterima, Diproses, Ditolak, atau Selesai.
+
+- Panduan untuk Admin  : Cara memverifikasi laporan, memberi tanggapan, dan meneruskan ke lembaga terkait.
 
 ## Halaman Lainnya
 
