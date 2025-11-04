@@ -17,7 +17,7 @@
 
 
 
-# 📱 Deskripsi Program TruthLink
+# 🧾 Deskripsi Program TruthLink
 
 TruthLink adalah sistem pelaporan digital berbasis website yang dirancang untuk mendukung tercapainya SDG 16: Peace, Justice, and Strong Institutions. Platform ini menjadi wadah pelaporan yang aman, cepat, dan transparan bagi masyarakat.
 Melalui sistem ini, pengguna dapat melaporkan berbagai kasus, seperti:
@@ -30,32 +30,24 @@ Melalui sistem ini, pengguna dapat melaporkan berbagai kasus, seperti:
 
 • Pelanggaran HAM
 
-• Penyalahgunaan kekuasaan
-
 Setiap laporan yang dikirim akan diterima oleh sistem, diperiksa kebenaran dan kelengkapannya oleh admin, lalu apabila dinyatakan tingkat keparahannya tinggi laporan tersebut akan diteruskan kepada lembaga atau instansi terkait untuk segera ditindaklanjuti.
 
 # 🌐 Teknologi  yang Digunakan
-Aplikasi ini dikembangkan untuk memudahkan pengguna dalam mengelola data secara tertata dan efisien. Pemilihan teknologi difokuskan agar program      mudah dikembangkan dan aman, diantaranya yaitu :
+Aplikasi ini dikembangkan untuk memudahkan pengguna dalam mengelola data secara tertata dan efisien. Pemilihan teknologi difokuskan agar program    mudah dikembangkan dan aman, diantaranya yaitu :
 
 1. Bahasa Pemrograman: Java dengan OOP, membuat kode modular dan mudah dikembangkan
 
 2. IDE: NetBeans, memudahkan pengembangan dan pengelolaan proyek
 
-3. GUI Framework: Java Swing, untuk antarmuka interaktif dan mudah digunakan
+3. Database: MySQL, menyimpan data secara aman dan permanen
 
-4. Database: MySQL, menyimpan data secara aman dan permanen
+4. Server/Environment: XAMPP, untuk menjalankan aplikasi web dan database secara lokal
 
-5. Server/Environment: XAMPP, untuk menjalankan aplikasi web dan database secara lokal
-
-6. ORM: Hibernate, mempermudah hubungan antara objek Java dan database
-
-7. Arsitektur: MVC, memisahkan logika, tampilan, dan kontrol data agar lebih terstruktur
-
-8. Desain: Figma, untuk merancang tampilan dan prototipe aplikasi
+5. Desain: Figma, untuk merancang tampilan dan prototipe aplikasi
   
 
 
-# 🔐 Fitur - Fitur Program
+# 📲 Fitur - Fitur Program
 
 🔹 Fitur untuk User (Pelapor)
 
@@ -80,7 +72,9 @@ Aplikasi ini dikembangkan untuk memudahkan pengguna dalam mengelola data secara 
     Searching & Filter: Mempermudah pencarian laporan berdasarkan kategori atau status.
 
 
-# Flowchart dan Use Case Diagram
+# 🖧 Flowchart dan Use Case Diagram
+
+  Flowchart dan Use Case Diagram pada sistem TruthLink digunakan untuk menggambarkan alur kerja aplikasi dan interaksi antara          pengguna dengan sistem.
 
 
 ## Flowchart
@@ -190,14 +184,17 @@ Aplikasi ini dikembangkan untuk memudahkan pengguna dalam mengelola data secara 
 </details>
 
 
-# Penerapan OOP
+# Penerapan OOP ♨️
 
-## 1. Encapsulation
+## ➀ Encapsulation
    
    Encapsulation merupakan salah satu pilar utama dalam Pemrograman Berorientasi Objek (PBO) yang bertujuan untuk melindungi data dari akses langsung dari luar kelas. Penerapan konsep ini dilakukan dengan menggunakan access modifier `private` pada atribut kelas dan menyediakan metode `getter` serta `setter` untuk mengakses atau memodifikasi nilai atribut tersebut. Dalam sistem ini, prinsip encapsulation diterapkan pada seluruh kelas entitas, seperti `User.java`, `Admin.java`, `Pelapor.java`, `Laporan.java`, dan `Tanggapan.java`. Hal ini menjaga integritas data serta keamanan informasi pengguna dalam sistem, karena setiap perubahan nilai atribut dilakukan secara terkontrol.
 
    Sebagai contoh implementasi pada kelas `Laporan.java`, atribut yang berfungsi merepresentasikan data laporan pengguna. Setiap atribut seperti `id_laporan`, `judul_laporan`, `isi_laporan`, dan `status` bersifat `private`, dan hanya dapat diakses melalui metode publik seperti `getJudul_laporan()` atau `setStatus()`.
 
+ 📂Source Kode Penerapan Encapsulation 
+
+ 
     ```
     @Entity
     @Table(name = "laporan")
@@ -313,8 +310,11 @@ Aplikasi ini dikembangkan untuk memudahkan pengguna dalam mengelola data secara 
                 });
             }
     ```
+</details>
+
+    
    
-## 2. Inheritance
+## ➁ Inheritance
    
    Inheritance merupakan pilar OOP yang memungkinkan suatu kelas (child/subclass) mewarisi properti dan metode dari kelas lain (parent/superclass), sehingga mengurangi redundansi dan meningkatkan efisiensi kode.
    
@@ -322,6 +322,9 @@ Aplikasi ini dikembangkan untuk memudahkan pengguna dalam mengelola data secara 
      
      Pada sistem ini, kelas `User.java` berperan sebagai superclass yang berisi atribut umum seperti `id_user`, `nama`, `username`, `password`, dan `email`. Kelas ini juga merupakan entitas JPA yang dipetakan ke tabel user di database dan menggunakan strategi pewarisan `@Inheritance(strategy = InheritanceType.JOINED)`. Melalui strategi ini, setiap subclass memiliki tabel tersendiri yang bergabung dengan tabel `user` berdasarkan kolom `id_user`.
 
+ 📂 Source Kode Penerapan Inheritance 
+
+ 
       ```
       @Entity
       @Table(name = "user")
@@ -361,7 +364,7 @@ Aplikasi ini dikembangkan untuk memudahkan pengguna dalam mengelola data secara 
      
      Kelas turunan (subclass) mewarisi seluruh atribut dan perilaku dari kelas `User.java`, serta menambahkan atribut baru yang lebih spesifik sesuai kebutuhan.
      
-     a. Pelapor
+    **a.Pelapor**
      
         Kelas `Pelapor.java` mewarisi `User.java` dan menambahkan atribut tambahan seperti `tanggal_lahir`, `jenis_kelamin`, dan `tanggal_daftar`. Kelas ini merepresentasikan pengguna yang berperan sebagai pelapor kasus dalam sistem.
      
@@ -395,7 +398,7 @@ Aplikasi ini dikembangkan untuk memudahkan pengguna dalam mengelola data secara 
         }
         ```
 
-     b. Admin
+     **b.Admin**
      
         Kelas `Admin.java` juga mewarisi `User.java` dan menambahkan atribut `kontak_admin` untuk menyimpan informasi kontak administrator. Kelas ini digunakan untuk mengelola data pelapor dan memverifikasi laporan yang masuk ke sistem.
 
@@ -424,14 +427,19 @@ Aplikasi ini dikembangkan untuk memudahkan pengguna dalam mengelola data secara 
             }    
         }
         ```
+ 
 
-## 3. Abstraction
+## ➂ Abstraction
    
    Abstraction merupakan konsep dalam Pemrograman Berorientasi Objek (PBO) yang berfungsi untuk menyembunyikan detail implementasi dan hanya menampilkan struktur penting yang perlu diketahui oleh kelas lain. Dalam sistem ini, abstraction diterapkan melalui kelas `User.java`, yang dideklarasikan sebagai abstract class dan berperan sebagai cetak biru (blueprint) bagi kelas `Admin.java` dan `Pelapor.java`.
 
    Berbeda dengan kelas biasa, User tidak dapat diinstansiasi secara langsung, melainkan hanya dapat digunakan melalui kelas turunannya. Hal ini memastikan bahwa setiap objek yang dibuat dari kelas User memiliki bentuk yang spesifik (sebagai Admin atau Pelapor), namun tetap mengikuti struktur dasar yang sama.
-   
-    ```
+
+
+📂Source Kode Penerapan Abstraction 
+
+
+```
     @Entity
     @Table(name = "user")
     @Inheritance(strategy = InheritanceType.JOINED)
@@ -456,11 +464,15 @@ Aplikasi ini dikembangkan untuk memudahkan pengguna dalam mengelola data secara 
    Melalui pendekatan ini, setiap kelas turunan seperti `Admin` atau `Pelapor` dapat mewarisi atribut dan relasi umum dari `User`, namun tetap memiliki karakteristik dan fungsi tambahan sesuai kebutuhan masing-masing.
 
 
-## 4. Polymorphism
+
+## ➃ Polymorphism
    
    Polymorphism merupakan salah satu pilar penting dalam Pemrograman Berorientasi Objek (PBO) yang memungkinkan suatu objek memiliki banyak bentuk dan berperilaku berbeda tergantung pada konteks pemanggilannya. Dalam sistem ini, konsep polymorphism diterapkan melalui kelas implementasi yang meng-override metode dari interface DAO. Sebagai contoh, pada kelas `LaporanIml.java` yang mengimplementasikan interface `LaporanDao.java`, setiap metode seperti `save()`, `getById()`, `getAll()`, `update()`, `delete()` dst. di-override dengan perilaku yang disesuaikan untuk entitas `Laporan.java`:
-   
-   ```
+
+ 📂Source Kode Penerapan Polymorphism
+
+
+```
    public class LaporanIml implements LaporanDao {
        @Override
        public void save(Laporan laporan) {
@@ -489,28 +501,34 @@ Aplikasi ini dikembangkan untuk memudahkan pengguna dalam mengelola data secara 
            }
        }
    }
-   ```
+ ```
 
-   Pada kode di atas, objek bertipe `LaporanDao` dapat merujuk ke objek dari kelas `LaporanIml.java` tanpa perlu mengetahui detail implementasinya. Ketika metode `save()` dipanggil melalui referensi `LaporanDao.java`, Java secara otomatis menjalankan versi metode yang sesuai dengan kelas implementasi yang aktif, pemanggilan metode berdasarkan objek yang sebenarnya inilah yang disebut runtime polymorphism.
 
-## 5. Interface
+
+
+## ➄ Interface
    
    Interface merupakan kontrak atau blueprint yang mendefinisikan kumpulan metode tanpa implementasi, yang harus di-override oleh kelas yang mengimplementasikannya. Dalam sistem ini, Interface digunakan untuk mendefinisikan kontrak atau blueprint metode tanpa implementasi. Dalam sistem ini, `LaporanDao.java` menjadi interface yang mendefinisikan operasi dasar terhadap entitas `Laporan`, seperti `save()`, `getAll()`, `delete()` dst. Kelas `LaporanIml.java` kemudian mengimplementasikan semua metode tersebut dengan logika spesifik menggunakan Hibernate. Dengan pemisahan ini, sistem menjadi lebih modular dan fleksibel, karena kode utama tidak bergantung langsung pada implementasi tertentu cukup pada interface-nya saja.
-   
-   ```
+
+ 📂Source Kode Penerapan
+
+
+ ```
    public interface LaporanDao {
        void save(Laporan laporan);
        Laporan getById(String id);
        List<Laporan> getAll();
        void update(Laporan laporan);
        void delete(Laporan laporan);
-    
        public long countAll();
-       public String getMostFrequentKategori();
-   }
+       public String getMostFrequentKategori(); }
    ```
 
+
+
+
 # Struktur Folder/Package
+
 <p align="center">
 <img width="650" height="500" alt="image" src="https://github.com/user-attachments/assets/46da45ed-7f99-4020-bff6-8f12c46a11f2" />
 <p>
@@ -598,6 +616,12 @@ Aplikasi ini dikembangkan untuk memudahkan pengguna dalam mengelola data secara 
 
 
 # Library / Framework
+• ORM: Hibernate, mempermudah hubungan antara objek Java dan database
+
+• Arsitektur: MVC, memisahkan logika, tampilan, dan kontrol data agar lebih terstruktur
+
+• GUI Framework: Java Swing, untuk antarmuka interaktif dan mudah digunakan
+
 
 
 # Cara Menggunakan Program 💻
@@ -622,16 +646,6 @@ Aplikasi ini dikembangkan untuk memudahkan pengguna dalam mengelola data secara 
 
 Halaman ini berfungsi sebagai penjelasan visi, latar belakang, dan alasan dikembangkannya TruthLink. Melalui halaman ini, pengguna diperkenalkan pada tujuan utama sistem, yaitu mendukung tercapainya SDGs 16 (Peace, Justice, and Strong Institutions).
 
-**Isi utama halaman ini mencakup:**
-
-- Komitmen untuk membantu pencegahan kekerasan, korupsi, dan pelanggaran hukum.
-
-- Penjelasan bahwa TruthLink dikembangkan sebagai platform pelaporan digital yang aman, cepat, dan transparan.
-
-- Menyampaikan bahwa sistem ini menjadi sarana bagi masyarakat untuk menyuarakan laporan tanpa rasa takut.
-
-
-
 ## Halaman Panduan
 
 <img width="921" height="692" alt="image" src="https://github.com/user-attachments/assets/fa23920f-6e95-4cea-8854-edc8fd174bc5" />
@@ -650,41 +664,107 @@ Halaman panduan berfungsi untuk membantu pengguna memahami cara menggunakan sist
 
 <img width="896" height="658" alt="image" src="https://github.com/user-attachments/assets/19f27817-7238-4490-a77c-dbdfe50b1c19" />
 
+Halaman ini menampilkan informasi pendukung yang dapat membantu pengguna jika membutuhkan bantuan atau ingin mengetahui lebih jauh tentang sistem TruthLink.
+
+Isi yang ditampilkan pada halaman ini, antara lain:
+
+📍 Informasi Lembaga / Instansi Terkait
+
+Menampilkan nama lembaga penerima laporan seperti KPK, Ombudsman, Kepolisian, atau lembaga internal kampus/instansi.
+
+📫 Alamat & Kontak
+
+Berisi email resmi, nomor kontak, atau link media sosial yang dapat dihubungi untuk pertanyaan atau pengaduan lebih lanjut.
+
+🌐 Link Terkait
+
+Bisa berupa website instansi, pedoman hukum, atau tautan panduan pelaporan.
+
+🔒 Kebijakan Privasi & Keamanan
+
+Menjelaskan bahwa identitas pelapor akan dijaga dan sistem mendukung pelaporan anonim demi melindungi keamanan pengguna.
 
 ## Registrasi Akun
 
 <img width="902" height="681" alt="image" src="https://github.com/user-attachments/assets/dbbf2856-1891-4aab-bf9a-f8d8bb2fc4b0" />
 
+Halaman ini berfungsi untuk melakukan pembuatan akun baru bagi pelapor jika belum memiliki akun sebelumnya. Pada halaman ini, pelapor diminta untuk mengisi beberapa data penting sebelum dapat mengakses sistem. Data yang perlu diisi meliputi:
+
+- Nama Lengkap
+
+- Alamat Email
+
+- Username
+
+- Password dan Konfirmasi Password
+
+- Jenis Kelamin
+
+- Tanggal Lahir
+
+Setelah semua data terisi dengan benar dan tombol Register ditekan, sistem akan menampilkan notifikasi “Registrasi berhasil! Silakan login.” sebagai tanda bahwa proses pendaftaran telah berhasil dilakukan.
+
 ## Role Pelapor
 
 <img width="922" height="658" alt="image" src="https://github.com/user-attachments/assets/a46e7946-5318-4f8c-bd15-26daebaaad35" />
+
+Setelah berhasil melakukan registrasi, pengguna dapat masuk ke sistem melalui halaman Login. Pada halaman ini, pengguna diminta untuk memasukkan Username yang telah di daftarakan dan Password yang sesuai. 
+
+sistem akan melakukan verifikasi akun. Jika data valid, maka akan muncul notifikasi “Login berhasil sebagai Pelapor!” yang menandakan bahwa proses autentikasi berhasil dan pengguna dapat melanjutkan ke menu utama sesuai perannya sebagai pelapor.
 
 ### Menu Pelapor
 
 <img width="921" height="679" alt="image" src="https://github.com/user-attachments/assets/709a1f77-9d70-4352-8625-5125d6d3acac" />
 
+Halaman ini merupakan tampilan utama setelah pelapor berhasil login. Pelapor  dapat:
+
+- Mengirim laporan baru melalui tombol Kirim Laporan
+
+- Melihat riwayat laporan yang sudah dikirim
+
+- Melihat ringkasan laporan seperti total laporan, diterima, diproses, dan ditolak
+
+- Melihat daftar laporan terbaru beserta status dan tanggapannya
+
+Menu ini membantu pelapor memantau dan mengelola laporan secara mudah dan transparan.
 
 ### Panduan
 
 <img width="921" height="692" alt="image" src="https://github.com/user-attachments/assets/2b5a1d26-18c6-406a-93a0-60de6d838391" />
+
+Halaman ini menampilkan langkah penggunaan TruthLink, mulai dari membuat laporan, mengirim, hingga memantau prosesnya. Alurnya meliputi: Daftar & Masuk → Kirim Laporan → Verifikasi → Lacak Perkembangan → Terima Tanggapan.
 
 ### Membuat Laporan
 
 
 <img width="921" height="692" alt="image" src="https://github.com/user-attachments/assets/b12c59e8-1b5a-4f30-86a4-c7794b2f6510" />
 
+Halaman ini digunakan untuk pelapor membuat laporan baru. Pelapor mengisi judul laporan, memilih kategori (kekerasan, korupsi, diskriminasi, atau pelanggaran HAM), lalu menuliskan deskripsi kejadian yang dialami atau diketahui.
 
 
 <img width="919" height="690" alt="image" src="https://github.com/user-attachments/assets/48ab7bb3-e78c-4aa0-8391-c0409b4975d0" />
 
-
+Untuk memperkuat laporan pelapor harus mengunnggah bukti pendukung dalam format PDF,  DOC ataupun PNG
 
 <img width="916" height="693" alt="image" src="https://github.com/user-attachments/assets/b9c88c88-06d4-45fa-bfe5-7df855930e86" />
+
+Setelah semua data dan bukti terunggah, pengguna dapat menekan tombol Kirim untuk mengirim laporan atau Batal untuk membatalkan proses.
 
 ### Melihat Riwayat Laporan
 
 
 <img width="934" height="692" alt="image" src="https://github.com/user-attachments/assets/572b1887-39e5-4c77-8129-cc4f90d2ed90" />
+
+
+Melihat Riwayat Laporan
+
+Pada halaman ini, pengguna dapat:
+
+- Melihat daftar semua laporan yang telah dibuat
+
+- Mengetahui judul, kategori, tanggal, status, dan tanggapan laporan
+
+- Memantau perkembangan laporan mulai dari dikirim, diproses, diterima, hingga ditolak.
 
 ### Mengedit Laporan
 
@@ -694,79 +774,162 @@ Halaman panduan berfungsi untuk membantu pengguna memahami cara menggunakan sist
 
 <img width="921" height="692" alt="image" src="https://github.com/user-attachments/assets/8fc4c28e-8d5a-4a3e-bacd-a0bcb5030490" />
 
+Jika setelah melihat riwayat laporan terdapat kesalahan atau data yang perlu diperbaiki, pelapor dapat:
 
+- Membuka laporan yang ingin diperbarui
+
+- Melakukan edit pada judul, deskripsi, atau bukti pendukung
+
+- Menyimpan perubahan dengan menekan tombol Simpan agar laporan terupdate di sistem.
+  
 # Menghapus Laporan
 
 
 <img width="931" height="691" alt="image" src="https://github.com/user-attachments/assets/d85a5395-eb15-4ec7-82bb-0120d35b12bb" />
 
+Pelapor dapat menghapus laporan jika merasa tidak jadi melaporkan atau terdapat kesalahan, dengan ketentuan:
 
+- Laporan belum diterima atau disetujui oleh admin
+
+- Penghapusan dilakukan melalui menu Riwayat Laporan
+
+- Setelah dihapus, laporan akan hilang dari daftar riwayat dan tidak dapat dipulihkan
+
+  Setelah seluruh proses seperti membuat, mengedit, atau menghapus laporan selesai dilakukan, pelapor dapat keluar dari akun melalui menu Logout.
 
 
 ## Role Admin
 
 <img width="923" height="660" alt="image" src="https://github.com/user-attachments/assets/1cd512c5-1808-4ada-99e3-23dbcd4a94d4" />
 
+Admin tidak perlu registrasi karena sudah terdaftar di database. Cukup masukkan username dan password, lalu tekan Login. Jika data valid, muncul pesan “Login berhasil sebagai Admin!” dan admin masuk ke halaman utama.
 
 ### Menu Admin
 
 <img width="921" height="692" alt="image" src="https://github.com/user-attachments/assets/968a1772-d381-44d7-bedc-3f7d32056fd6" />
+
+- Setelah berhasil login, maka akan masuk ke dashboard utama.
+
+-  Beranda menampilkan ringkasan laporan berdasarkan status (diterima, proses, selesai, ditolak), total laporan masuk, jumlah pengguna, dan kategori laporan terbanyak.
+
+- Menu Samping digunakan untuk navigasi:
+  
+• Laporan: melihat dan mengubah status laporan, 
+• Tanggapan: memberi atau meninjau tanggapan atas laporan.
+• Lembaga: mengelola data lembaga yang terhubung.
+
+- Lembaga Terhubung menampilkan instansi yang menangani laporan sesuai kategori.
 
 
 ### Menu Lihat Laporan
 
 <img width="934" height="679" alt="image" src="https://github.com/user-attachments/assets/be0a471f-3fc1-4f22-8905-7c516e1c3158" />
 
+Menu ini digunakan admin untuk melihat semua laporan yang dikirim oleh pelapor.
+Dalam tampilan, daftar laporan ditampilkan dalam bentuk tabel berisi:
+ID Laporan, ID User (pelapor), Judul Laporan, Deskripsi atau ringkasan laporan.
+
+Admin dapat melakukan beberapa tindakan utama:
+
+▪ Edit: memperbarui atau mengubah data laporan jika diperlukan.
+
+▪ Hapus: menghapus laporan yang tidak valid atau duplikat.
+
+▪ Pilih Kategori: memfilter laporan berdasarkan jenis atau kategori tertentu.
+
+▪ Beri Tanggapan: menambahkan tanggapan atau respon terhadap laporan pelapor.
+
+▪  Fitur Search:  mencari laporan secara cepat berdasarkan kata kunci tertentu, seperti ID laporan, atau ID user.
 
 ### Mengedit Laporan
 
 <img width="934" height="679" alt="image" src="https://github.com/user-attachments/assets/02c2ddb1-5867-4ed2-a234-a0c932ed01f6" />
 
-PILIH laporan yang mau diedit:P
+Untuk melakukan pengeditan data laporan, admin harus terlebih dahulu memilih satu laporan dari daftar di menu Lihat Laporan. 
 
 
 
 <img width="921" height="692" alt="image" src="https://github.com/user-attachments/assets/8a8d2537-70fc-496a-8638-3d25c845a21e" />
 
+Pada halaman ini, admin dapat:
+
+- Melihat detail laporan seperti ID Laporan, ID User, Judul, Kategori, Isi Laporan, Tanggal Laporan, dan Bukti.
+
+- Mengubah data yang perlu diperbaiki, misalnya judul, isi laporan, atau tingkat keparahan.
+
+- Menekan tombol “Simpan Perubahan” untuk menyimpan hasil edit.
+
+- Menggunakan tombol “Kembali” untuk batal dan kembali ke daftar laporan tanpa menyimpan perubahan.
 
 ### Menghapus Laporan
 
 <img width="935" height="670" alt="image" src="https://github.com/user-attachments/assets/d8fce4ce-4188-4610-82e9-2a74032f2e42" />
 
+Halaman ini menampilkan kebijakan admin untuk menghapus laporan yang tidak valid atau tidak relevan,
+diantaranya:
+
+▪ Laporan dikirim salah alamat atau tidak sesuai kategori.
+
+▪ Laporan bersifat main-main, tidak berdasar, atau mengandung informasi palsu.
+
+▪ Ada duplikasi laporan dengan isi yang sama.
+
+Admin cukup memilih laporan yang ingin dihapus pada daftar, kemudian menekan tombol “Hapus”. Setelah dikonfirmasi, data laporan akan dihapus dari sistem agar database tetap bersih dan hanya berisi laporan yang benar-benar sah.
+
 ### Memberi Tanggapan
 
 <img width="921" height="692" alt="image" src="https://github.com/user-attachments/assets/e0846cb4-f39e-4316-8502-2e4e4a578f77" />
 
+Admin dapat memberi tanggapan resmi pada laporan yang masuk melalui halaman Buat Tanggapan.
+Di halaman ini, admin bisa:
+
+▪ Melihat detail laporan (tanggal, judul, kategori, tingkat keparahan).
+
+▪ Menulis isi tanggapan dan memilih status laporan (Sedang Proses, Selesai, Ditolak).
+
+▪ Meneruskan laporan ke lembaga terkait atau mengirim tanggapan langsung ke pelapor.
 
 ### Menu Lihat Tanggapan
 
 <img width="934" height="679" alt="image" src="https://github.com/user-attachments/assets/bea164d0-67ef-4f8f-a1cc-51867a80afc6" />
 
+Menu ini menampilkan daftar tanggapan terhadap laporan masyarakat dalam bentuk tabel berisi ID tanggapan, ID laporan, ID user, ID lembaga, dan isi tanggapan.
+Admin dapat mencari (Search), memfilter status, serta menghapus tanggapan yang tidak relevan atau keliru.
 
 ### Menghapus Tanggapan
 
 <img width="929" height="673" alt="image" src="https://github.com/user-attachments/assets/e8b09a14-390d-454b-b472-b90a0c4d75db" />
 
+Admin dapat menghapus lembaga yang tidak aktif atau datanya tidak valid dengan memilih lembaga, menekan Hapus, lalu mengonfirmasi pesan “Yakin ingin menghapus lembaga dengan ID [ID Lembaga]?”. Jika Ya, data terhapus; jika Tidak, dibatalkan.
 
 ### Menu Lihat Lembaga
 
 <img width="921" height="679" alt="image" src="https://github.com/user-attachments/assets/0c35b9d0-dfbf-4fde-9af6-76d0bb564802" />
 
+Menu ini digunakan admin untuk melihat dan mengelola data lembaga yang menangani laporan sesuai  dengan kategori.
 
 ### Menambah Lembaga
 
 <img width="921" height="679" alt="image" src="https://github.com/user-attachments/assets/67372f79-ede9-4bfc-a272-095b25eda810" />
 
+Admin dapat menambahkan lembaga baru melalui tombol Tambah pada menu Lembaga.
+Isi form dengan nama lembaga, alamat, kontak, dan jenis lembaga (misalnya Penegak Hukum, Anti Korupsi, Perlindungan & Pengawasan, atau Etika & Transparansi), lalu tekan Simpan untuk menambahkan ke daftar.
 
 ### Menghapus Lembaga
 
 <img width="917" height="667" alt="image" src="https://github.com/user-attachments/assets/a5da1029-1618-47ff-952f-88d9759ed552" />
 
+Admin dapat menghapus lembaga yang sudah tidak aktif atau datanya tidak valid melalui menu Lembaga.
+Pilih lembaga yang ingin dihapus, tekan Hapus, lalu konfirmasi pesan “Yakin ingin menghapus lembaga dengan ID [ID Lembaga]?”.
+Jika memilih Ya, data akan terhapus; jika Tidak, proses dibatalkan.
+
 ### Keluar Dari Menu
 
 <img width="916" height="691" alt="image" src="https://github.com/user-attachments/assets/d00f2294-617e-4f0b-bd17-21119ae68519" />
 
-
+Admin dapat keluar dari sistem dengan menekan tombol Keluar.
+Sistem akan menampilkan konfirmasi “Apakah Anda yakin ingin keluar?”.
+Pilih Ya untuk keluar dan kembali ke halaman login, atau Tidak untuk membatalkan.
 
 
 
