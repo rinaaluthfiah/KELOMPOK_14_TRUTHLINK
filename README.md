@@ -490,9 +490,9 @@ Aplikasi ini dikembangkan untuk memudahkan pengguna dalam mengelola data secara 
    }
    ```
 
-   Pada kode di atas, objek bertipe `LaporanDao` dapat merujuk ke berbagai kelas implementasi `LaporanIml.java` tanpa perlu mengetahui detail cara kerjanya. Ketika metode `save()` dipanggil melalui referensi `LaporanDao`, Java secara otomatis menjalankan versi metode yang sesuai dengan kelas implementasi yang aktif, inilah yang disebut runtime polymorphism.
+   Pada kode di atas, objek bertipe `LaporanDao` dapat merujuk ke objek dari kelas `LaporanIml.java` tanpa perlu mengetahui detail implementasinya. Ketika metode `save()` dipanggil melalui referensi `LaporanDao.java`, Java secara otomatis menjalankan versi metode yang sesuai dengan kelas implementasi yang aktif, pemanggilan metode berdasarkan objek yang sebenarnya inilah yang disebut runtime polymorphism.
 
-5. Interface
+6. Interface
    
    Interface merupakan kontrak atau blueprint yang mendefinisikan kumpulan metode tanpa implementasi, yang harus di-override oleh kelas yang mengimplementasikannya. Dalam sistem ini, Interface digunakan untuk mendefinisikan kontrak atau blueprint metode tanpa implementasi. Dalam sistem ini, `LaporanDao.java` menjadi interface yang mendefinisikan operasi dasar terhadap entitas `Laporan`, seperti `save()`, `getAll()`, `delete()` dst. Kelas `LaporanIml.java` kemudian mengimplementasikan semua metode tersebut dengan logika spesifik menggunakan Hibernate. Dengan pemisahan ini, sistem menjadi lebih modular dan fleksibel, karena kode utama tidak bergantung langsung pada implementasi tertentu cukup pada interface-nya saja.
    
